@@ -25,8 +25,9 @@ Sparta/
 ├── docker-compose.yml                     # PostgreSQL + demo OPC UA server + Sparta.AI
 ├── .env.example                           # шаблон переменных окружения
 ├── .gitignore                             # исключения для Git
-├── scada-agent-prompt.md                  # техническое задание
-├── docs/                                  # документация (пусто)
+├── LICENSE                                # Apache License 2.0
+├── docs/
+│   └── agent-prompt.md                    # техническое задание
 ├── migrations/
 │   └── 001_create_work_orders.sql         # служебные таблицы заявок
 ├── scada-config/
@@ -156,7 +157,7 @@ sparta-scada/
 └── scripts/              # скрипты сборки/запуска
 ```
 
-> Пока эти директории не созданы. Реализация планируется по этапам, описанным в `scada-agent-prompt.md`.
+> Пока эти директории не созданы. Реализация планируется по этапам, описанным в `docs/agent-prompt.md`.
 
 ---
 
@@ -176,7 +177,7 @@ sparta-scada/
 
 ## 6. Планируемый порядок разработки
 
-Этапы из `scada-agent-prompt.md`:
+Этапы из `docs/agent-prompt.md`:
 
 1. **Этап 0 — каркас**: репозиторий, `docker-compose` с PostgreSQL и demo OPC UA server, скелет `README.md`. ✅
 2. **Этап 1 — данные**: демо-конфигурация Rapid SCADA с OPC UA, PostgreSQL-архив, проверка потока тегов. ✅ (Проверено: `opc-plc` → `ScadaComm`/`DrvOpcUa` → `ScadaServer`/`ModArcPostgreSql` → `PostgreSQL`.)
@@ -295,7 +296,7 @@ dotnet build
 
 ## 8. Стиль кода и соглашения
 
-Из `scada-agent-prompt.md`:
+Из `docs/agent-prompt.md`:
 
 - **Язык кода и комментариев**: английский.
 - **Документация**: русский (README, docs, AGENTS.md).
