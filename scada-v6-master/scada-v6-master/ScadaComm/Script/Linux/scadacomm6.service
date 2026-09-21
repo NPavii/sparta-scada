@@ -1,0 +1,13 @@
+[Unit]
+Description=Rapid SCADA Communicator
+
+[Service]
+Type=notify
+WorkingDirectory=/opt/scada/ScadaComm
+ExecStart=/usr/bin/dotnet /opt/scada/ScadaComm/ScadaCommWkr.dll
+Restart=always
+RestartSec=10
+SyslogIdentifier=scadacomm6
+
+[Install]
+WantedBy=multi-user.target

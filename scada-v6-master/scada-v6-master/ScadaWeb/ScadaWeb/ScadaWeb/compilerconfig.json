@@ -1,0 +1,38 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/layout/basic-layout.css",
+    "inputFile": "wwwroot/css/layout/basic-layout.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/pages/login.css",
+    "inputFile": "wwwroot/css/pages/login.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/layout/main-layout.css",
+    "inputFile": "wwwroot/css/layout/main-layout.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/pages/about.css",
+    "inputFile": "wwwroot/css/pages/about.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/pages/user-profile.css",
+    "inputFile": "wwwroot/css/pages/user-profile.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/pages/view.css",
+    "inputFile": "wwwroot/css/pages/view.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/layouts/basic-layout.css",
+    "inputFile": "wwwroot/css/layouts/basic-layout.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/layouts/main-layout.css",
+    "inputFile": "wwwroot/css/layouts/main-layout.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/pages/reports.css",
+    "inputFile": "wwwroot/css/pages/reports.scss"
+  }
+]

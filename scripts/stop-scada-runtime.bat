@@ -1,0 +1,6 @@
+@echo off
+echo Stopping ScadaComm...
+taskkill /F /IM ScadaCommApp.exe 2>nul
+
+echo Stopping ScadaServer...
+taskkill /F /IM ScadaServerApp.exe 2>nul

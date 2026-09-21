@@ -1,0 +1,10 @@
+﻿@import '../_variables';
+
+#divContainer {
+    font-family: $title-font-family;
+
+    span {
+        position: relative;
+        top: -1.5rem;
+    }
+}

@@ -1,0 +1,32 @@
+﻿@page "{id:int?}"
+@model UserProfileModel
+@{
+    Layout = "_MainLayout";
+    dynamic dict = Locale.GetDictionary("Scada.Web.Pages.UserProfile");
+    ViewBag.Title = dict.PageTitle;
+}
+
+<h1>@dict.PageTitle</h1>
+
+<div class="main-form-lg">
+    <table class="table">
+        <tbody>
+            <tr>
+                <td>@dict.lblUserID</td>
+                <td>@Model.UserID</td>
+            </tr>
+            <tr>
+                <td>@dict.lblUsername</td>
+                <td>@Model.Username</td>
+            </tr>
+            <tr>
+                <td>@dict.lblRole</td>
+                <td>@Model.RoleName</td>
+            </tr>
+            <tr>
+                <td>@dict.lblTimeZone</td>
+                <td>@Model.TimeZone</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

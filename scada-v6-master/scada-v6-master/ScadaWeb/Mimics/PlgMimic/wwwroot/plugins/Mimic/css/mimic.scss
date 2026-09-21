@@ -1,0 +1,104 @@
+﻿$mimic-background-color: white;
+$mimic-box-shadow: 0 0 0 1px var(--bs-gray-500);
+$component-selected-box-shadow: 0 0 0 3px lime;
+$component-hover-box-shadow: 0 0 0 1px var(--bs-gray-500);
+$component-fiction-border: 1px dashed var(--bs-gray-600);
+
+.mimic-wrapper {
+    overflow: auto;
+    overscroll-behavior: none;
+    position: relative; // affects scrolling and scaling
+
+    .mimic {
+        background-color: $mimic-background-color;
+        background-repeat: no-repeat;
+        position: absolute; // affects scaling
+
+        .comp {
+            box-sizing: border-box;
+            line-height: normal;
+            position: absolute;
+
+            &.text {
+                .text-content {
+                    overflow: hidden;
+                }
+            }
+
+            &.picture {
+                .picture-content {
+                    background-clip: content-box;
+                    background-repeat: no-repeat;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            &.panel {
+                background-color: inherit; // not transparent
+            }
+        }
+    }
+}
+
+.mimic-wrapper.view-mode {
+    .mimic {
+        .comp {
+            &.invisible-state {
+                display: none;
+            }
+
+            &.disabled-state {
+                pointer-events: none;
+            }
+
+            &.has-action {
+                cursor: pointer;
+            }
+
+            &.wait-action {
+                cursor: wait !important;
+            }
+        }
+    }
+}
+
+.mimic-wrapper.edit-mode {
+    cursor: default;
+
+    .mimic {
+        box-shadow: $mimic-box-shadow;
+
+        .comp {
+            &::before { // component area
+                content: "";
+                inset: var(--border-width, 0);
+                position: absolute;
+            }
+
+            &.selected::before {
+                box-shadow: $component-selected-box-shadow;
+            }
+
+            &:not(.selected):hover::before {
+                box-shadow: $component-hover-box-shadow;
+            }
+
+            &.fiction-border::before {
+                border: $component-fiction-border;
+            }
+
+            &.picture.blank {
+                .picture-content {
+                    background-image: url("../images/picture-blank.svg");
+                }
+            }
+
+            &.faceplate {
+                .comp:hover::before {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}

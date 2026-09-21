@@ -1,0 +1,30 @@
+﻿@import '../_variables';
+
+$loginbox-width: 400px;
+
+body {
+    background-color: $gray-100;
+}
+
+#divAlert {
+    max-width: $loginbox-width;
+    
+    &.validation-summary-valid {
+        display: none;
+    }
+
+    ul {
+        margin-bottom: 0;
+    }
+}
+
+#divLoginBox {
+    background-color: $body-bg;
+    max-width: $loginbox-width;
+}
+
+#imgCaptcha {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}

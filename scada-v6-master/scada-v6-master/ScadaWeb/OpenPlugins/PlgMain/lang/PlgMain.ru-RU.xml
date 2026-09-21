@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PlgMainDictionaries>
+  <Dictionary key="Scada.Web.Plugins.PlgMain.Areas.Main.Pages.Command">
+    <Phrase key="PageTitle">Команда</Phrase>
+    <Phrase key="CommandSent">Команда отправлена.</Phrase>
+    <Phrase key="CmdParseError">Ошибка при разборе команды</Phrase>
+    <Phrase key="CnlRow">Канал:</Phrase>
+    <Phrase key="ObjRow">Объект:</Phrase>
+    <Phrase key="DevRow">Устройство:</Phrase>
+    <Phrase key="lblPassword">Пароль</Phrase>
+    <Phrase key="lblCmdDec">Значение команды</Phrase>
+    <Phrase key="lblCmdHex">Значение команды (16-ричное число)</Phrase>
+    <Phrase key="lblCmdBin">Значение команды (бинарное число)</Phrase>
+    <Phrase key="lblCmdEnum">Команда</Phrase>
+    <Phrase key="lblCmdDate">Значение команды (дата/время)</Phrase>
+    <Phrase key="lblCmdData">Данные команды</Phrase>
+    <Phrase key="lblStr">Строка</Phrase>
+    <Phrase key="lblHex">16-ричные данные</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Plugins.PlgMain.Areas.Main.Pages.EventAck">
+    <Phrase key="PageTitle">Событие</Phrase>
+    <Phrase key="EventNotFound">Событие {0} не найдено.</Phrase>
+    <Phrase key="EventAcknowledged">Событие квитировано.</Phrase>
+    <Phrase key="TimeRow">Дата и время:</Phrase>
+    <Phrase key="ObjRow">Объект:</Phrase>
+    <Phrase key="DevRow">Устройство:</Phrase>
+    <Phrase key="CnlRow">Канал:</Phrase>
+    <Phrase key="DescrRow">Описание:</Phrase>
+    <Phrase key="SevRow">Серьёзность:</Phrase>
+    <Phrase key="AckRow">Квитирование:</Phrase>
+    <Phrase key="AckYes">Да</Phrase>
+    <Phrase key="AckNo">Нет</Phrase>
+    <Phrase key="AckTip">Нажмите кнопку OK, чтобы квитировать событие.</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Plugins.PlgMain.Areas.Main.Pages.EventReport">
+    <Phrase key="PageTitle">Отчёт по событиям</Phrase>
+    <Phrase key="AllObjItem">-- Все объекты --</Phrase>
+    <Phrase key="AllAvailObjItem">-- Все доступные объекты --</Phrase>
+    <Phrase key="NotSpecifiedItem">-- Не задана --</Phrase>
+    <Phrase key="lblStartTime">Начало</Phrase>
+    <Phrase key="lblEndTime">Окончание</Phrase>
+    <Phrase key="lblArchive">Архив</Phrase>
+    <Phrase key="lblObj">Объект</Phrase>
+    <Phrase key="lblSeverity">Серьёзность</Phrase>
+    <Phrase key="btnGenerateReport">Скачать отчёт</Phrase>
+    <Phrase key="divWaitHint">Отчёт генерируется. Пожалуйста, подождите...</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Plugins.PlgMain.Areas.Main.Pages.Events">
+    <Phrase key="TimeCol">Дата и время</Phrase>
+    <Phrase key="ObjCol">Объект</Phrase>
+    <Phrase key="DevCol">Устройство</Phrase>
+    <Phrase key="CnlCol">Канал</Phrase>
+    <Phrase key="DescrCol">Описание</Phrase>
+    <Phrase key="SevCol">Серьёзность</Phrase>
+    <Phrase key="AckCol">Квитирование</Phrase>
+    <Phrase key="EventInfo">Последние {0} событий за {1} ч</Phrase>
+    <Phrase key="spanAllEventsBtn">Все события</Phrase>
+    <Phrase key="spanEventsByViewBtn">По представлению</Phrase>
+    <Phrase key="spanPrintBtn_ToolTip">Экпортировать события</Phrase>
+    <Phrase key="spanErrorBadge">Ошибка</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Plugins.PlgMain.Areas.Main.Pages.Events.Js">
+    <Phrase key="Loading">Загрузка...</Phrase>
+    <Phrase key="NoEvents">События отсутствуют</Phrase>
+    <Phrase key="Ack">Квитировать</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Plugins.PlgMain.Areas.Main.Pages.HistDataReport">
+    <Phrase key="PageTitle">Отчёт по историческим данным</Phrase>
+    <Phrase key="lblStartTime">Начало</Phrase>
+    <Phrase key="lblEndTime">Окончание</Phrase>
+    <Phrase key="lblArchive">Архив</Phrase>
+    <Phrase key="lblCnlNums">Каналы</Phrase>
+    <Phrase key="btnSelectCnls">Выбрать...</Phrase>
+    <Phrase key="btnGenerateReport">Скачать отчёт</Phrase>
+    <Phrase key="divWaitHint">Отчёт генерируется. Пожалуйста, подождите...</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Plugins.PlgMain.Areas.Main.Pages.TableView">
+    <Phrase key="TableViewTitle">Таблица {0}</Phrase>
+    <Phrase key="PrevDate">Предыдущая дата</Phrase>
+    <Phrase key="SelDate">Выбранная дата</Phrase>
+    <Phrase key="MinusOneDay">-1д</Phrase>
+    <Phrase key="ItemColumn">Элемент</Phrase>
+    <Phrase key="CurrentColumn">Текущие</Phrase>
+    <Phrase key="CnlTip">Канал</Phrase>
+    <Phrase key="DeviceTip">Устройство</Phrase>
+    <Phrase key="ObjTip">Объект</Phrase>
+    <Phrase key="QuantityTip">Величина</Phrase>
+    <Phrase key="UnitTip">Размерность</Phrase>
+    <Phrase key="SendCommandTip">Отправить команду</Phrase>
+    <Phrase key="spanPrintBtn_ToolTip">Экпортировать табличное представление</Phrase>
+    <Phrase key="spanLoadingBadge">Загрузка...</Phrase>
+    <Phrase key="spanErrorBadge">Ошибка</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Plugins.PlgMain.Code.EventWindowSpec">
+    <Phrase key="EventWindowTitle">События</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Plugins.PlgMain.PlgMainLogic">
+    <Phrase key="ReportGroup">Основные отчёты</Phrase>
+    <Phrase key="HistDataReport">Отчёт по историческим данным</Phrase>
+    <Phrase key="EventReport">Отчёт по событиям</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Plugins.PlgMain.Report">
+    <Phrase key="GenCaption">Получено:</Phrase>
+    <Phrase key="UserCaption">Пользователь:</Phrase>
+    <Phrase key="ArcCaption">Архив:</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Plugins.PlgMain.Report.Js">
+    <Phrase key="InvalidPeriod">Дата начала должна быть меньше или равна дате окончания.</Phrase>
+    <Phrase key="PeriodTooLong">Максимальная длина периода {0} дн.</Phrase>
+    <Phrase key="InvalidChannels">Некорректные номера каналов.</Phrase>
+    <Phrase key="NoSeverity">Серьёзность не выбрана.</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Plugins.PlgMain.Report.EventReportBuilder">
+    <Phrase key="GeneralTitleFormat">События, {0} - {1}</Phrase>
+    <Phrase key="TailTitleFormat">Последние {0} событий за {1} ч</Phrase>
+    <Phrase key="ViewCaption">Представление:</Phrase>
+    <Phrase key="ObjCaption">Объекты:</Phrase>
+    <Phrase key="SevCaption">Серьёзность:</Phrase>
+    <Phrase key="TimeCol">Дата и время</Phrase>
+    <Phrase key="ObjCol">Объект</Phrase>
+    <Phrase key="DevCol">Устройство</Phrase>
+    <Phrase key="CnlCol">Канал</Phrase>
+    <Phrase key="DescrCol">Описание</Phrase>
+    <Phrase key="SevCol">Серьёзность</Phrase>
+    <Phrase key="AckCol">Квитирование</Phrase>
+    <Phrase key="WorksheetName">События</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Plugins.PlgMain.Report.HistDataReportBuilder">
+    <Phrase key="TitleFormat">Исторические данные, {0} - {1}</Phrase>
+    <Phrase key="CnlCaption">Каналы:</Phrase>
+    <Phrase key="TimeCol">Дата и время</Phrase>
+    <Phrase key="DataCol">Канал {0}</Phrase>
+    <Phrase key="AvgCaption">Среднее</Phrase>
+    <Phrase key="MinCaption">Минимум</Phrase>
+    <Phrase key="MaxCaption">Максимум</Phrase>
+    <Phrase key="WorksheetName">Исторические данные</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Plugins.PlgMain.Report.TableViewReportBuilder">
+    <Phrase key="TitleFormat">{0}, {1} - {2}</Phrase>
+    <Phrase key="ItemCol">Элемент</Phrase>
+    <Phrase key="WorksheetName">Табличное представление</Phrase>
+  </Dictionary>
+</PlgMainDictionaries>

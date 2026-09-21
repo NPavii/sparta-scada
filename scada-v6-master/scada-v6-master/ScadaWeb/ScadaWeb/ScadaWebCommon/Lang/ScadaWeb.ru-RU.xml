@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ScadaWebDictionaries>
+  <!-- Common phrases -->
+  <Dictionary key="Scada.Web">
+    <Phrase key="CorrectErrors">Пожалуйста исправьте следующие ошибки:</Phrase>
+    <Phrase key="IllegalRole">Недопустимая роль пользователя.</Phrase>
+    <Phrase key="ClientError">Ошибка при взаимодействии с сервером</Phrase>
+    <Phrase key="UnknownUsername">Неизвестный</Phrase>
+    <Phrase key="AccessDenied">Доступ запрещен</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.TableForms">
+    <Phrase key="SearchPlaceholder">Поиск</Phrase>
+    <Phrase key="NewItem">Новая запись</Phrase>
+    <Phrase key="ViewItem">Просмотреть запись</Phrase>
+    <Phrase key="EditItem">Редактировать запись</Phrase>
+    <Phrase key="DeleteItem">Удалить запись</Phrase>
+    <Phrase key="DeleteItemConfirm">Вы уверены, что хотите удалить запись?</Phrase>
+    <Phrase key="NoData">Нет данных</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.TableForms.Js">
+    <Phrase key="LoadDataError">Ошибка при загрузке данных.</Phrase>
+    <Phrase key="DeleteItemConfirm">Вы уверены, что хотите удалить запись?</Phrase>
+    <Phrase key="ItemExists">Запись уже существует.</Phrase>
+    <Phrase key="FillOutFields">Пожалуйста, заполните обязательные поля.</Phrase>
+    <Phrase key="ValidJsonRequired">Требуется корректный JSON.</Phrase>
+  </Dictionary>
+  <!-- ScadaWeb.dll -->
+  <Dictionary key="Scada.Web.Code.ViewLoader">
+    <Phrase key="ViewNotSpecified">Запрошенное представление не задано.</Phrase>
+    <Phrase key="ViewNotExists">Запрошенное представление не существует.</Phrase>
+    <Phrase key="InsufficientViewRights">Недостаточно прав на представление.</Phrase>
+    <Phrase key="UnableResolveViewSpec">Не удалось получить спецификацию представления.</Phrase>
+    <Phrase key="UnableLoadView">Не удалось загрузить представление.</Phrase>
+    <Phrase key="ViewMissingFromCache">Представление отсутствует в кэше.</Phrase>
+    <Phrase key="ViewUndefined">Представление не определено.</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Pages.Errors.AccessDenied">
+    <Phrase key="PageTitle">Доступ запрещен</Phrase>
+    <Phrase key="ErrorMessage">У вас недостаточно прав для доступа к запрошенному ресурсу.</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Pages.Errors.Error">
+    <Phrase key="PageTitle">Ошибка</Phrase>
+    <Phrase key="ErrorMessage">При обработке вашего запроса произошла ошибка. Подробности ошибки записаны в журнал приложения.</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Pages.Errors.StatusCode">
+    <Phrase key="PageTitle">Ошибка {0}</Phrase>
+    <Phrase key="Error401Header">Требуется авторизация</Phrase>
+    <Phrase key="Error403Header">Доступ запрещен</Phrase>
+    <Phrase key="Error404Header">Не найдено</Phrase>
+    <Phrase key="ErrorMessage">При обработке вашего запроса произошла ошибка.</Phrase>
+    <Phrase key="Error401Message">Пожалуйста, войдите в систему.</Phrase>
+    <Phrase key="Error403Message">У вас недостаточно прав для доступа к запрошенному ресурсу.</Phrase>
+    <Phrase key="Error404Message">Страница или объект не найдены.</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Pages.Shared._MainLayout">
+    <Phrase key="spanMenuBtn_ToolTip">Показать/скрыть меню</Phrase>
+    <Phrase key="spanNotifBtn_ToolTip">Показать/скрыть уведомления</Phrase>
+    <Phrase key="spanProfileBtn_ToolTip">Профиль пользователя</Phrase>
+    <Phrase key="spanLogoutBtn">Выйти</Phrase>
+    <Phrase key="spanLogoutBtn_ToolTip">Выйти</Phrase>
+    <Phrase key="spanFullscreenBtn_ToolTip">На весь экран</Phrase>
+    <Phrase key="spanExitFullscreenBtn_ToolTip">Нормальный вид</Phrase>
+    <Phrase key="divMainMenuTab">Главное меню</Phrase>
+    <Phrase key="divViewExplorerTab">Представления</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Pages.Shared._MainLayout.Modal">
+    <Phrase key="Ok">OK</Phrase>
+    <Phrase key="Yes">Да</Phrase>
+    <Phrase key="No">Нет</Phrase>
+    <Phrase key="Execute">Выполнить</Phrase>
+    <Phrase key="Cancel">Отмена</Phrase>
+    <Phrase key="Close">Закрыть</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Pages.Shared._MainLayout.NotifPanel">
+    <Phrase key="NoNotif">Уведомлений нет</Phrase>
+    <Phrase key="Mute">Отключить звук</Phrase>
+    <Phrase key="Unmute">Включить звук</Phrase>
+    <Phrase key="AckAll">Подтвердить все</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Pages.About">
+    <Phrase key="PageTitle">О приложении</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Pages.CnlSelect">
+    <Phrase key="PageTitle">Выбор каналов</Phrase>
+    <Phrase key="lblObj">Объект</Phrase>
+    <Phrase key="lblOnlySelected">Показывать только выбранные каналы</Phrase>
+    <Phrase key="SelectedColumn">Выбран</Phrase>
+    <Phrase key="NumberColumn">Номер</Phrase>
+    <Phrase key="NameColumn">Наименование</Phrase>
+    <Phrase key="SelectObjectItem">-- Выберите объект --</Phrase>
+    <Phrase key="FilterRequired">Укажите фильтр, пожалуйста.</Phrase>
+    <Phrase key="NoChannels">Каналы, удовлетворяющие фильтру, отсутствуют.</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Pages.Login">
+    <Phrase key="PageTitle">Вход в систему</Phrase>
+    <Phrase key="NotReady">Приложение не готово. Повторите попытку позже.</Phrase>
+    <Phrase key="InvalidCaptcha">Неверный защитный код.</Phrase>
+    <Phrase key="lblUsername">Имя пользователя</Phrase>
+    <Phrase key="lblPassword">Пароль</Phrase>
+    <Phrase key="lblCaptcha">Защитный код</Phrase>
+    <Phrase key="lblRememberMe">Запомнить меня</Phrase>
+    <Phrase key="btnLogin">Войти</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Pages.Reports">
+    <Phrase key="PageTitle">Отчёты</Phrase>
+    <Phrase key="NoReports">Доступные отчёты отсутствуют.</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Pages.UserProfile">
+    <Phrase key="PageTitle">Профиль пользователя</Phrase>
+    <Phrase key="lblUserID">Идентификатор:</Phrase>
+    <Phrase key="lblUsername">Имя пользователя:</Phrase>
+    <Phrase key="lblRole">Роль:</Phrase>
+    <Phrase key="lblTimeZone">Часовой пояс:</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Pages.View">
+    <Phrase key="PageTitle">Представление</Phrase>
+    <Phrase key="divHideDataWindowBtn_ToolTip">Скрыть окно данных</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Pages.ViewFrame">
+    <Phrase key="PageTitle">Представление</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Plugins">
+    <Phrase key="LoadPluginConfigError">Ошибка при загрузке конфигурации плагина</Phrase>
+    <Phrase key="SavePluginConfigError">Ошибка при сохранении конфигурации плагина</Phrase>
+    <Phrase key="CnlNotFound">Канал {0} не найден.</Phrase>
+    <Phrase key="CnlNotOutput">Канал {0} не является выходным.</Phrase>
+    <Phrase key="CommandsDisabled">Команды отключены.</Phrase>
+    <Phrase key="SendCommand">Отправка команды на канал {0} пользователем {1}</Phrase>
+    <Phrase key="ActionNotAllowed">Действие не разрешено.</Phrase>
+    <Phrase key="ViewTitle">Представление {0}</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.TreeView.MenuItem">
+    <Phrase key="ReportsMenuItem">Отчёты</Phrase>
+    <Phrase key="AdministrationMenuItem">Администрирование</Phrase>
+    <Phrase key="ConfigurationMenuItem">Конфигурация</Phrase>
+    <Phrase key="RegistrationMenuItem">Регистрация</Phrase>
+    <Phrase key="PluginsMenuItem">Плагины</Phrase>
+    <Phrase key="AboutMenuItem">О приложении</Phrase>
+  </Dictionary>
+</ScadaWebDictionaries>

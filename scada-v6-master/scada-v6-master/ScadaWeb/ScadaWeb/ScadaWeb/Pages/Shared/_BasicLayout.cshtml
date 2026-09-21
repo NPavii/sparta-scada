@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title - @CommonPhrases.ProductName</title>
+
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/open-sans/css/open-sans.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet">
+    <link href="~/css/layouts/basic-layout.min.css" rel="stylesheet" asp-append-version="true" />
+    @RenderSection("Styles", required: false)
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/scada-common.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</head>
+<body class="@ViewBag.BodyCssClass">
+    @RenderBody()
+</body>
+</html>

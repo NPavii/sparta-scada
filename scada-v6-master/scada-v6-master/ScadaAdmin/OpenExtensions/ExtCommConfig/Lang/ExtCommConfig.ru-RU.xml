@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ExtCommConfigDictionaries>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.ExtCommConfigLogic">
+    <Phrase key="GeneralOptionsNode">Основные параметры</Phrase>
+    <Phrase key="DriversNode">Драйверы</Phrase>
+    <Phrase key="DataSourcesNode">Источники данных</Phrase>
+    <Phrase key="LinesNode">Линии связи</Phrase>
+    <Phrase key="LineOptionsNode">Параметры линии</Phrase>
+    <Phrase key="LineStatsNode">Статистика линии</Phrase>
+    <Phrase key="LogsNode">Журналы</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.Code.ExtensionUtils">
+    <Phrase key="DeviceNotSupported">Драйвер не поддерживает создание устройств.</Phrase>
+    <Phrase key="UnableCreateDeviceView">Невозможно создать пользовательский интерфейс устройства.</Phrase>
+    <Phrase key="NoDeviceProperties">Устройство не предоставляет окно свойств.</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.Controls.CtrlCnlCreate1">
+    <Phrase key="lblCommLine">Линия связи</Phrase>
+    <Phrase key="lblDevice">Устройство</Phrase>
+    <Phrase key="AllCommLines">&lt;Все линии связи&gt;</Phrase>
+    <Phrase key="DeviceInfo">Драйвер: {0}&#13;&#10;Экземпляр: {1}&#13;&#10;Каналы: {2}</Phrase>
+    <Phrase key="DeviceNotFound">Устройство не найдено в Коммуникаторе.</Phrase>
+    <Phrase key="NoDeviceSelected">Устройство не выбрано.</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.Controls.CtrlCnlCreate2">
+    <Phrase key="lblDevice">Устройство</Phrase>
+    <Phrase key="lblObj">Объект</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.Controls.CtrlCnlCreate3">
+    <Phrase key="lblDevice">Устройство</Phrase>
+    <Phrase key="gbCnlNums">Номера каналов</Phrase>
+    <Phrase key="lblStartCnlNum">Начальный</Phrase>
+    <Phrase key="lblEndCnlNum">Конечный</Phrase>
+    <Phrase key="btnMap">Карта</Phrase>
+    <Phrase key="btnReset">Сброс</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.Controls.CtrlExtensionMenu">
+    <Phrase key="miWizards">Мастеры</Phrase>
+    <Phrase key="miAddLine">Добавить линию...</Phrase>
+    <Phrase key="miAddDevice">Добавить устройство...</Phrase>
+    <Phrase key="miCreateChannels">Создать каналы...</Phrase>
+    <Phrase key="btnAddLine.ToolTip">Добавить линию</Phrase>
+    <Phrase key="btnAddDevice.ToolTip">Добавить устройство</Phrase>
+    <Phrase key="btnCreateChannels.ToolTip">Создать каналы</Phrase>
+    <Phrase key="miLineSync">Сихронизировать...</Phrase>
+    <Phrase key="miLineAdd">Добавить линию</Phrase>
+    <Phrase key="miLineMoveUp">Переместить линию вверх</Phrase>
+    <Phrase key="miLineMoveDown">Переместить линию вниз</Phrase>
+    <Phrase key="miLineDelete">Удалить линию</Phrase>
+    <Phrase key="miLineStart">Запустить линию</Phrase>
+    <Phrase key="miLineStop">Остановить линию</Phrase>
+    <Phrase key="miLineRestart">Перезапустить линию</Phrase>
+    <Phrase key="miDeviceChannels">Перейти к каналам</Phrase>
+    <Phrase key="miDeviceCommand">Отправить команду...</Phrase>
+    <Phrase key="miDevicePoll">Опросить</Phrase>
+    <Phrase key="miDeviceProperties">Свойства</Phrase>
+    <Phrase key="ConfirmDeleteLine">Вы уверены, что хотите удалить линию связи?</Phrase>
+    <Phrase key="CnlNodeNotFound">Узел каналов не найден.</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.Controls.CtrlLineMain">
+    <Phrase key="gbLine">Линия связи</Phrase>
+    <Phrase key="chkActive">Активна</Phrase>
+    <Phrase key="chkIsBound">Привязана к базе конфигурации</Phrase>
+    <Phrase key="lblCommLineNum">Номер</Phrase>
+    <Phrase key="lblName">Наименование</Phrase>
+    <Phrase key="gbLineOptions">Параметры линии</Phrase>
+    <Phrase key="lblReqRetries">Количество попыток запроса при ошибке</Phrase>
+    <Phrase key="lblCycleDelay">Задержка после цикла опроса, мс</Phrase>
+    <Phrase key="lblCmdEnabled">Команды разрешены</Phrase>
+    <Phrase key="lblPollAfterCmd">Опрос устройства после команды</Phrase>
+    <Phrase key="lblDetailedLog">Подробный журнал</Phrase>
+    <Phrase key="gbChannel">Канал связи</Phrase>
+    <Phrase key="lblChannelType">Тип</Phrase>
+    <Phrase key="btnChannelProperties">Свойства</Phrase>
+    <Phrase key="lblChannelOptions">Параметры</Phrase>
+    <Phrase key="UndefinedChannelType">Не задан</Phrase>
+    <Phrase key="ChannelNotSupported">Драйвер не поддерживает создание каналов связи.</Phrase>
+    <Phrase key="UnableCreateChannelView">Невозможно создать пользовательский интерфейс канала связи.</Phrase>
+    <Phrase key="NoChannelProperties">Канал связи не предоставляет окно свойств.</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.Controls.CtrlLineCustom">
+    <Phrase key="btnAddOption">Добавить</Phrase>
+    <Phrase key="btnDeleteOption">Удалить</Phrase>
+    <Phrase key="colOptionName">Наименование</Phrase>
+    <Phrase key="colOptionValue">Значение</Phrase>
+    <Phrase key="gbSelectedOption">Выбранный параметр</Phrase>
+    <Phrase key="lblOptionName">Наименование</Phrase>
+    <Phrase key="lblOptionValue">Значение</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.Controls.CtrlLinePolling">
+    <Phrase key="btnAddDevice">Добавить</Phrase>
+    <Phrase key="btnMoveUpDevice">Вверх</Phrase>
+    <Phrase key="btnMoveDownDevice">Вниз</Phrase>
+    <Phrase key="btnDeleteDevice">Удалить</Phrase>
+    <Phrase key="btnCutDevice">Вырезать</Phrase>
+    <Phrase key="btnCopyDevice">Копировать</Phrase>
+    <Phrase key="btnPasteDevice">Вставить</Phrase>
+    <Phrase key="colOrder">№ п/п</Phrase>
+    <Phrase key="colActive">Активно</Phrase>
+    <Phrase key="colPollOnCmd">Опрос по команде</Phrase>
+    <Phrase key="colIsBound">Привязано</Phrase>
+    <Phrase key="colNumber">Номер</Phrase>
+    <Phrase key="colName">Наименование</Phrase>
+    <Phrase key="colDriver">Драйвер</Phrase>
+    <Phrase key="colNumAddress">Числовой адрес</Phrase>
+    <Phrase key="colStrAddress">Строковый адрес</Phrase>
+    <Phrase key="colTimeout">Таймаут</Phrase>
+    <Phrase key="colDelay">Пауза</Phrase>
+    <Phrase key="colTime">Время</Phrase>
+    <Phrase key="colPeriod">Период</Phrase>
+    <Phrase key="colCmdLine">Командная строка</Phrase>
+    <Phrase key="gbSelectedDevice">Выбранное устройство</Phrase>
+    <Phrase key="chkActive">Активно</Phrase>
+    <Phrase key="chkPollOnCmd">Опрос только по команде</Phrase>
+    <Phrase key="chkIsBound">Привязано к базе конфигурации</Phrase>
+    <Phrase key="lblDeviceNum">Номер</Phrase>
+    <Phrase key="lblName">Наименование</Phrase>
+    <Phrase key="lblDriver">Драйвер</Phrase>
+    <Phrase key="lblNumAddress">Числовой адрес</Phrase>
+    <Phrase key="lblStrAddress">Строковый адрес или имя сервера</Phrase>
+    <Phrase key="lblTimeout">Таймаут</Phrase>
+    <Phrase key="lblDelay">Пауза</Phrase>
+    <Phrase key="lblTime">Время</Phrase>
+    <Phrase key="lblPeriod">Период</Phrase>
+    <Phrase key="lblCmdLine">Командная строка</Phrase>
+    <Phrase key="lblCustomOptions">Параметры</Phrase>
+    <Phrase key="btnDeviceProperties">Свойства</Phrase>
+    <Phrase key="btnResetPollingOptions">Сброс</Phrase>
+    <Phrase key="btnResetPollingOptions.ToolTip">Установить параметры опроса устройства по умолчанию</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.Controls.CtrlSync1">
+    <Phrase key="lblSyncDirection">Выберите направление синхронизации:</Phrase>
+    <Phrase key="rbBaseToComm">Из базы конфигурации в Коммуникатор</Phrase>
+    <Phrase key="rbCommToBase">Из Коммуникатора в базу конфигурации</Phrase>
+    <Phrase key="lblInfo">Отсутствующие линии и устройства будут созданы.&#13;&#10;Существующие линии и устройства будут обновлены.&#13;&#10;&#13;&#10;Затрагиваемые свойства:&#13;&#10;- Наименование линии связи&#13;&#10;- Наименование устройства&#13;&#10;- Драйвер устройства&#13;&#10;- Адрес устройства</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.Controls.CtrlSync2">
+    <Phrase key="lblSelect">Выберите линии и устройства для синхронизации:</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.Forms.FrmCnlCreate">
+    <Phrase key="this">Создание каналов</Phrase>
+    <Phrase key="chkPreview">Просмотр</Phrase>
+    <Phrase key="btnBack">&lt; Назад</Phrase>
+    <Phrase key="btnNext">Далее &gt;</Phrase>
+    <Phrase key="btnCreate">Создать </Phrase>
+    <Phrase key="btnCancel">Отмена</Phrase>
+    <Phrase key="CreateCnlsStep1">Шаг 1 из 3: Выберите устройство</Phrase>
+    <Phrase key="CreateCnlsStep2">Шаг 2 из 3: Выберите объект вновь созданных каналов</Phrase>
+    <Phrase key="CreateCnlsStep3">Шаг 3 из 3: Назначьте номера каналов</Phrase>
+    <Phrase key="CreateCnlsCompleted">Создание каналов завершено успешно.&#13;&#10;{0} channel(s) added.</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.Forms.FrmCnlPreview">
+    <Phrase key="this">Предварительный просмотр каналов</Phrase>
+    <Phrase key="btnDelete">Удалить</Phrase>
+    <Phrase key="colCnlNum">Номер</Phrase>
+    <Phrase key="colActive">Активный</Phrase>
+    <Phrase key="colName">Наименование</Phrase>
+    <Phrase key="colTagNum">Номер тега</Phrase>
+    <Phrase key="colTagCode">Код тега</Phrase>
+    <Phrase key="btnAdd">Добавить</Phrase>
+    <Phrase key="btnCancel">Отмена</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.Forms.FrmCommLogs">
+    <Phrase key="AppFilter">Приложение</Phrase>
+    <Phrase key="LinesFilter">Линии связи</Phrase>
+    <Phrase key="DevicesFilter">Устройства</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.Forms.FrmDataSources">
+    <Phrase key="this">Источники данных</Phrase>
+    <Phrase key="btnAdd">Добавить</Phrase>
+    <Phrase key="btnMoveUp">Вверх</Phrase>
+    <Phrase key="btnMoveDown">Вниз</Phrase>
+    <Phrase key="btnDelete">Удалить</Phrase>
+    <Phrase key="btnCut">Вырезать</Phrase>
+    <Phrase key="btnCopy">Копировать</Phrase>
+    <Phrase key="btnPaste">Вставить</Phrase>
+    <Phrase key="colOrder">№ п/п</Phrase>
+    <Phrase key="colActive">Активен</Phrase>
+    <Phrase key="colCode">Код</Phrase>
+    <Phrase key="colName">Наименование</Phrase>
+    <Phrase key="colDriver">Драйвер</Phrase>
+    <Phrase key="gbDataSource">Выбранный источник данных</Phrase>
+    <Phrase key="chkActive">Активен</Phrase>
+    <Phrase key="lblCode">Код</Phrase>
+    <Phrase key="lblName">Наименование</Phrase>
+    <Phrase key="lblDriver">Драйвер</Phrase>
+    <Phrase key="lblOptions">Параметры</Phrase>
+    <Phrase key="btnProperties">Свойства</Phrase>
+    <Phrase key="DriverNotSpecified">Драйвер не указан.</Phrase>
+    <Phrase key="DataSourceNotSupported">Драйвер не поддерживает создание источников данных.</Phrase>
+    <Phrase key="UnableCreateDataSourceView">Невозможно создать пользовательский интерфейс источника данных.</Phrase>
+    <Phrase key="NoDataSourceProperties">Источник данных не предоставляет окно свойств.</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.Forms.FrmDeviceAdd">
+    <Phrase key="this">Добавление устройства</Phrase>
+    <Phrase key="gbDevice">Устройство</Phrase>
+    <Phrase key="lblDeviceNum">Номер</Phrase>
+    <Phrase key="lblName">Наименование</Phrase>
+    <Phrase key="lblCode">Код</Phrase>
+    <Phrase key="lblDevType">Тип устройства</Phrase>
+    <Phrase key="lblNumAddress">Числовой адрес</Phrase>
+    <Phrase key="lblStrAddress">Строковый адрес или имя сервера</Phrase>
+    <Phrase key="lblCommLine">Линия связи</Phrase>
+    <Phrase key="lblDescr">Описание</Phrase>
+    <Phrase key="gbComm">Коммуникатор</Phrase>
+    <Phrase key="chkAddToComm">Добавить устройство в Коммуникатор</Phrase>
+    <Phrase key="lblInstance">Экземпляр</Phrase>
+    <Phrase key="btnOK">OK</Phrase>
+    <Phrase key="btnCancel">Отмена</Phrase>
+    <Phrase key="DeviceExistsInConfigDatabase">Устройство с таким номером уже существует в базе конфигурации.</Phrase>
+    <Phrase key="DeviceExistsInLineConfig">Устройство с таким номером уже существует в конфигурации линии связи.</Phrase>
+    <Phrase key="LineNotFoundInCommConfig">Линия связи не найдена в конфигурации Коммуникатора.</Phrase>
+    <Phrase key="ChooseLine">Выберите линию связи.</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.Forms.FrmDeviceCommand">
+    <Phrase key="this">Команда {0}</Phrase>
+    <Phrase key="lblCmdNum">Номер команды</Phrase>
+    <Phrase key="lblCmdCode">Код команды</Phrase>
+    <Phrase key="rbNumVal">Число</Phrase>
+    <Phrase key="rbStrData">Строка</Phrase>
+    <Phrase key="rbHexData">16-ричные данные</Phrase>
+    <Phrase key="btnOff">Откл</Phrase>
+    <Phrase key="btnOn">Вкл</Phrase>
+    <Phrase key="btnSend">Отправить</Phrase>
+    <Phrase key="btnClose">Закрыть</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.Forms.FrmDeviceData">
+    <Phrase key="this">Устройство {0}</Phrase>
+    <Phrase key="btnDeviceProperties">Свойства</Phrase>
+    <Phrase key="btnSendCommand">Команда</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.Forms.FrmDrivers">
+    <Phrase key="this">Драйверы</Phrase>
+    <Phrase key="lblDrivers">Доступные драйверы:</Phrase>
+    <Phrase key="btnProperties">Свойства</Phrase>
+    <Phrase key="btnRegister">Регистрация</Phrase>
+    <Phrase key="lblDescr">Описание</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.Forms.FrmGeneralOptions">
+    <Phrase key="this">Основные параметры</Phrase>
+    <Phrase key="gbGeneralOptions">Основные параметры</Phrase>
+    <Phrase key="lblIsBound">Приложение привязано к базе конфигурации</Phrase>
+    <Phrase key="lblSendModifiedData">Передавать только изменившиеся данные тегов устройства</Phrase>
+    <Phrase key="lblSendAllDataPeriod">Период передачи данных всех тегов устройства, с</Phrase>
+    <Phrase key="lblEnableCommands">Разрешить команды телеуправления</Phrase>
+    <Phrase key="lblEnableFileCommands">Считывать команды телеуправления из файлов</Phrase>
+    <Phrase key="lblStartLinesOnCommand">Запускать линии связи по команде</Phrase>
+    <Phrase key="lblStopWait">Ожидание остановки сервиса, с</Phrase>
+    <Phrase key="lblMaxLogSize">Максимальный размер файла журнала, МБ</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.Forms.FrmLineAdd">
+    <Phrase key="this">Добавление линии связи</Phrase>
+    <Phrase key="gbLine">Линия связи</Phrase>
+    <Phrase key="lblCommLineNum">Номер</Phrase>
+    <Phrase key="lblName">Наименование</Phrase>
+    <Phrase key="lblDescr">Описание</Phrase>
+    <Phrase key="gbComm">Коммуникатор</Phrase>
+    <Phrase key="chkAddToComm">Добавить линию в Коммуникатор</Phrase>
+    <Phrase key="lblInstance">Экземпляр</Phrase>
+    <Phrase key="btnOK">OK</Phrase>
+    <Phrase key="btnCancel">Отмена</Phrase>
+    <Phrase key="LineExistsInConfigDatabase">Линия связи с таким номером уже существует в базе конфигурации.</Phrase>
+    <Phrase key="LineExistsInCommConfig">Линия связи с таким номером уже существует в конфигурации Коммуникатора.</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.Forms.FrmLineConfig">
+    <Phrase key="lbTabs.Items[0]">Основные</Phrase>
+    <Phrase key="lbTabs.Items[1]">Пользовательские</Phrase>
+    <Phrase key="lbTabs.Items[2]">Опрос устройств</Phrase>
+    <Phrase key="LineConfigTitle">Параметры линии {0}</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.Forms.FrmLineStats">
+    <Phrase key="lbTabs.Items[0]">Состояние линии</Phrase>
+    <Phrase key="lbTabs.Items[1]">Журнал линии</Phrase>
+    <Phrase key="chkPause">Пауза</Phrase>
+    <Phrase key="LineStatsTitle">Статистика линии {0}</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Admin.Extensions.ExtCommConfig.Forms.FrmSync">
+    <Phrase key="this">Синхронизация линий и устройств</Phrase>
+    <Phrase key="btnNext">Далее</Phrase>
+    <Phrase key="btnSync">Выполнить</Phrase>
+    <Phrase key="btnCancel">Отмена</Phrase>
+    <Phrase key="SyncCompleted">Синхронизация успешно завершена.</Phrase>
+    <Phrase key="SyncCompletedWithError">Синхронизация завершена с ошибкой:&#13;&#10;{0}</Phrase>
+    <Phrase key="NoDataToSync">Данные для синхронизации не выбраны.</Phrase>
+  </Dictionary>
+</ExtCommConfigDictionaries>

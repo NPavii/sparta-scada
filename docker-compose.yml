@@ -1,0 +1,80 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: sparta-postgres
+    hostname: sparta-postgres
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-scada}
+      POSTGRES_USER: ${POSTGRES_USER:-scada}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-scada}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./migrations:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-scada} -d ${POSTGRES_DB:-scada}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - sparta-network
+
+  opc-plc:
+    image: mcr.microsoft.com/iotedge/opc-plc@sha256:fa926a6fc4a58d77abe034c8483d91e91aa768c5a50ea3f5d86e45b66d955486
+    container_name: sparta-opc-plc
+    hostname: sparta-opc-plc
+    restart: unless-stopped
+    command: >
+      --pn=4840
+      --autoaccept
+      --sph
+      --sn=25
+      --sr=10
+      --st=uint8
+      --fn=25
+      --fr=1
+      --ft=uint8
+      --an=25
+      --aron
+      --ut
+    ports:
+      - "4840:4840"
+    networks:
+      - sparta-network
+    healthcheck:
+      test: ["CMD-SHELL", "timeout 2 bash -c '</dev/tcp/localhost/4840'"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 10s
+
+  sparta-ai-service:
+    build: ./src/Sparta.AI
+    container_name: sparta-ai-service
+    hostname: sparta-ai-service
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      AI_DATABASE_URL: postgresql://${POSTGRES_USER:-scada}:${POSTGRES_PASSWORD:-scada}@postgres:5432/${POSTGRES_DB:-scada}
+      CNL_XML_PATH: /scada-config/SpartaDemo/BaseXML/Cnl.xml
+    ports:
+      - "${AI_SERVICE_PORT:-8000}:8000"
+    volumes:
+      - ./scada-config:/scada-config:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - sparta-network
+
+volumes:
+  pgdata:
+
+networks:
+  sparta-network:
+    driver: bridge

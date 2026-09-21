@@ -1,0 +1,5 @@
+Language                 : Polish
+Culture name:            : pl-PL
+Rapid SCADA version      : 6.3.0
+Rapid SCADA applications : All
+Author                   : Machine translate

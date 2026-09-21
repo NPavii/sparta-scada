@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ScadaServerDictionaries>
+  <!-- ScadaServerCommon.dll -->
+  <Dictionary key="Scada.Server.Archives">
+    <Phrase key="UnspecifiedArchiveKind">미지정</Phrase>
+    <Phrase key="CurrentArchiveKind">현재의</Phrase>
+    <Phrase key="HistoricalArchiveKind">역사적인</Phrase>
+    <Phrase key="EventsArchiveKind">이벤트</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Server.Modules">
+    <Phrase key="LoadModuleConfigError">모듈 구성을 로드하는 중에 오류가 발생했습니다.</Phrase>
+    <Phrase key="SaveModuleConfigError">모듈 구성 저장 오류</Phrase>
+    <Phrase key="SaveModuleConfigConfirm">모듈 구성이 수정되었습니다.  변경 사항을 저장하시겠습니까?</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Server.Engine.CoreLogic">
+    <Phrase key="CommandSentBy">{0}에서 보냄</Phrase>
+    <Phrase key="EmptyCredentials">사용자 이름 또는 비밀번호는 비워둘 수 없습니다.</Phrase>
+    <Phrase key="InvalidCredentials">잘못된 사용자 이름 또는 비밀번호</Phrase>
+    <Phrase key="AccountDisabled">계정이 비활성화되었습니다.</Phrase>
+  </Dictionary>
+  <!-- ScadaServerCommon.Forms.dll -->
+  <Dictionary key="Scada.Server.Forms.Controls.CtrlCurrentArchiveOptions">
+    <Phrase key="lblReadOnly">읽기 전용</Phrase>
+    <Phrase key="lblLogEnabled">로그 활성화</Phrase>
+    <Phrase key="lblFlushPeriod">플러시 기간</Phrase>
+    <Phrase key="txtFlushPeriodUnit">비서</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Server.Forms.Controls.CtrlEventArchiveOptions">
+    <Phrase key="lblReadOnly">읽기 전용</Phrase>
+    <Phrase key="lblLogEnabled">로그 활성화</Phrase>
+    <Phrase key="lblRetention">보유 기간</Phrase>
+    <Phrase key="txtRetentionUnit">낮</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Server.Forms.Controls.CtrlHistoricalArchiveOptions">
+    <Phrase key="lblReadOnly">읽기 전용</Phrase>
+    <Phrase key="lblLogEnabled">로그가 활성화되었습니다.</Phrase>
+    <Phrase key="lblRetention">보유기간</Phrase>
+    <Phrase key="txtRetentionUnit">낮</Phrase>
+    <Phrase key="lblIsPeriodic">주기적인 데이터만</Phrase>
+    <Phrase key="lblWriteWithPeriod">마침표로 쓰기</Phrase>
+    <Phrase key="lblUsePeriodStartTime">기간 시작 시 타임스탬프</Phrase>
+    <Phrase key="lblWritingPeriod">집필기간</Phrase>
+    <Phrase key="cbWritingPeriodUnit.Items[0]">비서</Phrase>
+    <Phrase key="cbWritingPeriodUnit.Items[1]">최소</Phrase>
+    <Phrase key="cbWritingPeriodUnit.Items[2]">시간</Phrase>
+    <Phrase key="cbWritingPeriodUnit.Items[3]">낮</Phrase>
+    <Phrase key="lblWritingOffset">쓰기 오프셋</Phrase>
+    <Phrase key="cbWritingOffsetUnit.Items[0]">비서</Phrase>
+    <Phrase key="cbWritingOffsetUnit.Items[1]">최소</Phrase>
+    <Phrase key="cbWritingOffsetUnit.Items[2]">시간</Phrase>
+    <Phrase key="cbWritingOffsetUnit.Items[3]">낮</Phrase>
+    <Phrase key="lblPullToPeriod">기간으로 가져오기</Phrase>
+    <Phrase key="txtPullToPeriodUnit">비서</Phrase>
+    <Phrase key="lblWriteOnChange">변경 사항에 대해 쓰기</Phrase>
+    <Phrase key="lblDeadband">불감대</Phrase>
+    <Phrase key="cbDeadbandUnit.Items[0]">Abs.</Phrase>
+    <Phrase key="cbDeadbandUnit.Items[1]">%</Phrase>
+  </Dictionary>
+</ScadaServerDictionaries>

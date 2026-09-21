@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ModArcBasicDictionaries>
+  <Dictionary key="Scada.Server.Modules.ModArcBasic.View.Forms.FrmArcDir">
+    <Phrase key="this">Директории архива</Phrase>
+    <Phrase key="chkUseDefaultDir">Использовать директории по умолчанию</Phrase>
+    <Phrase key="lblArcDir">Архив в формате DAT</Phrase>
+    <Phrase key="btnBrowseArcDir">Обзор...</Phrase>
+    <Phrase key="lblArcCopyDir">Копия архива в формате DAT</Phrase>
+    <Phrase key="btnBrowseArcCopyDir">Обзор...</Phrase>
+    <Phrase key="btnSetToDefaultWin">Для Windows</Phrase>
+    <Phrase key="btnSetToDefaultLinux">Для Linux</Phrase>
+    <Phrase key="btnOK">OK</Phrase>
+    <Phrase key="btnCancel">Отмена</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Server.Modules.ModArcBasic.View.Forms.FrmBasicCAO">
+    <Phrase key="this">Параметры архива текущих данных</Phrase>
+    <Phrase key="gbGeneralOptions">Основные параметры</Phrase>
+    <Phrase key="lblLogEnabled">Журнал включен</Phrase>
+    <Phrase key="lblFlushPeriod">Период сохранения</Phrase>
+    <Phrase key="txtFlushPeriodUnit">Сек.</Phrase>
+    <Phrase key="gbWritingOptions">Параметры записи</Phrase>
+    <Phrase key="lblUseCopyDir">Запись в директорию копии</Phrase>
+    <Phrase key="btnShowDir">Директории</Phrase>
+    <Phrase key="btnOK">OK</Phrase>
+    <Phrase key="btnCancel">Отмена</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Server.Modules.ModArcBasic.View.Forms.FrmBasicEAO">
+    <Phrase key="this">Параметры архива событий</Phrase>
+    <Phrase key="gbGeneralOptions">Основные параметры</Phrase>
+    <Phrase key="lblLogEnabled">Журнал включен</Phrase>
+    <Phrase key="lblRetention">Период хранения</Phrase>
+    <Phrase key="txtRetentionUnit">День</Phrase>
+    <Phrase key="gbWritingOptions">Параметры записи</Phrase>
+    <Phrase key="lblUseCopyDir">Запись в директорию копии</Phrase>
+    <Phrase key="lblMaxQueueSize">Макс. размер очереди</Phrase>
+    <Phrase key="btnShowDir">Директории</Phrase>
+    <Phrase key="btnOK">OK</Phrase>
+    <Phrase key="btnCancel">Отмена</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Server.Modules.ModArcBasic.View.Forms.FrmBasicHAO">
+    <Phrase key="this">Параметры архива исторических данных</Phrase>
+    <Phrase key="gbGeneralOptions">Основные параметры</Phrase>
+    <Phrase key="lblLogEnabled">Журнал включен</Phrase>
+    <Phrase key="lblRetention">Период хранения</Phrase>
+    <Phrase key="txtRetentionUnit">День</Phrase>
+    <Phrase key="lblWriteWithPeriod">Записывать периодически</Phrase>
+    <Phrase key="lblUsePeriodStartTime">Время на начало периода</Phrase>
+    <Phrase key="lblWritingPeriod">Период записи</Phrase>
+    <Phrase key="cbWritingPeriodUnit.Items[0]">Сек.</Phrase>
+    <Phrase key="cbWritingPeriodUnit.Items[1]">Мин.</Phrase>
+    <Phrase key="cbWritingPeriodUnit.Items[2]">Час</Phrase>
+    <Phrase key="cbWritingPeriodUnit.Items[3]">День</Phrase>
+    <Phrase key="cbWritingPeriodUnit.Items[4]">Месяц</Phrase>
+    <Phrase key="lblWritingOffset">Смещение записи</Phrase>
+    <Phrase key="cbWritingOffsetUnit.Items[0]">Сек.</Phrase>
+    <Phrase key="cbWritingOffsetUnit.Items[1]">Мин.</Phrase>
+    <Phrase key="cbWritingOffsetUnit.Items[2]">Час</Phrase>
+    <Phrase key="cbWritingOffsetUnit.Items[3]">День</Phrase>
+    <Phrase key="lblPullToPeriod">Притягивать к периоду</Phrase>
+    <Phrase key="txtPullToPeriodUnit">Сек.</Phrase>
+    <Phrase key="gbWritingOptions">Параметры записи</Phrase>
+    <Phrase key="lblUseCopyDir">Запись в директорию копии</Phrase>
+    <Phrase key="lblMaxQueueSize">Макс. размер очереди</Phrase>
+    <Phrase key="btnShowDir">Директории</Phrase>
+    <Phrase key="btnOK">OK</Phrase>
+    <Phrase key="btnCancel">Отмена</Phrase>
+  </Dictionary>
+</ModArcBasicDictionaries>

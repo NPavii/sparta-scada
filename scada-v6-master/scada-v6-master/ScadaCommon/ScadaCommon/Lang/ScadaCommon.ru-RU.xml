@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ScadaDictionaries>
+  <!-- ScadaCommon.dll -->
+  <Dictionary key="Scada.Application">
+    <Phrase key="ProductName">Rapid SCADA</Phrase>
+    <Phrase key="ServerAppName">Сервер</Phrase>
+    <Phrase key="CommAppName">Коммуникатор</Phrase>
+    <Phrase key="WebAppName">Вебстанция</Phrase>
+    <Phrase key="WebsiteUrl">https://rapidscada.ru</Phrase>
+    <Phrase key="UnhandledException">Необработанное исключение</Phrase>
+    <Phrase key="ExecutionImpossible">Нормальная работа невозможна</Phrase>
+    <Phrase key="StartLogic">Запуск обработки логики</Phrase>
+    <Phrase key="LogicAlreadyStarted">Обработка логики уже запущена</Phrase>
+    <Phrase key="StartLogicError">Ошибка при запуске обработки логики</Phrase>
+    <Phrase key="LogicStopped">Обработка логики остановлена</Phrase>
+    <Phrase key="UnableToStopLogic">Не удалось остановить обработку логики за установленное время</Phrase>
+    <Phrase key="StopLogicError">Ошибка при остановке обработки логики</Phrase>
+    <Phrase key="LogicLoopError">Ошибка в цикле работы логики</Phrase>
+    <Phrase key="ThreadFatalError">Неустранимая ошибка в потоке</Phrase>
+    <Phrase key="WriteInfoError">Ошибка при записи в файл информации о работе приложения</Phrase>
+    <Phrase key="ConnectionNotFound">Соединение &quot;{0}&quot; не найдено.</Phrase>
+    <Phrase key="DatabaseNotSupported">База данных не поддерживается.</Phrase>
+    <Phrase key="OperationNotSupported">Операция не поддерживается.</Phrase>
+    <Phrase key="CommandSent">Команда отправлена.</Phrase>
+    <Phrase key="SendCommandError">Ошибка при отправке команды</Phrase>
+    <Phrase key="AgentDisabled">Агент отключен.</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.ConfigDatabase">
+    <Phrase key="UndefinedTable">Неопределённая</Phrase>
+    <Phrase key="ArchiveTable">Архивы</Phrase>
+    <Phrase key="ArchiveKindTable">Виды архивов</Phrase>
+    <Phrase key="CnlTable">Каналы</Phrase>
+    <Phrase key="CnlStatusTable">Статусы каналов</Phrase>
+    <Phrase key="CnlTypeTable">Типы каналов</Phrase>
+    <Phrase key="CommLineTable">Линии связи</Phrase>
+    <Phrase key="DataTypeTable">Типы данных</Phrase>
+    <Phrase key="DeviceTable">Устройства</Phrase>
+    <Phrase key="DevTypeTable">Типы устройств</Phrase>
+    <Phrase key="FormatTable">Форматы</Phrase>
+    <Phrase key="LimTable">Границы</Phrase>
+    <Phrase key="ObjTable">Объекты</Phrase>
+    <Phrase key="ObjRightTable">Права на объекты</Phrase>
+    <Phrase key="QuantityTable">Величины</Phrase>
+    <Phrase key="RoleTable">Роли</Phrase>
+    <Phrase key="RoleRefTable">Наследование ролей</Phrase>
+    <Phrase key="ScriptTable">Скрипты</Phrase>
+    <Phrase key="UnitTable">Размерности</Phrase>
+    <Phrase key="UserTable">Пользователи</Phrase>
+    <Phrase key="ViewTable">Представления</Phrase>
+    <Phrase key="ViewTypeTable">Типы представлений</Phrase>
+    <Phrase key="IndexNotFound">Индекс не найден.</Phrase>
+    <Phrase key="EntityCaption">[{0}] {1}</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Files">
+    <Phrase key="FileNotFound">Не найден файл.</Phrase>
+    <Phrase key="NamedFileNotFound">Файл {0} не найден.</Phrase>
+    <Phrase key="DirectoryNotExists">Директория не существует.</Phrase>
+    <Phrase key="PathNotSupported">Путь не поддерживается.</Phrase>
+    <Phrase key="InvalidFileFormat">Некорректный формат файла.</Phrase>
+    <Phrase key="LoadConfigError">Ошибка при загрузке конфигурации</Phrase>
+    <Phrase key="SaveConfigError">Ошибка при сохранении конфигурации</Phrase>
+    <Phrase key="SaveConfigConfirm">Конфигурация была изменена. Сохранить изменения?</Phrase>
+    <Phrase key="LoadViewError">Ошибка при загрузке представления</Phrase>
+    <Phrase key="SaveViewError">Ошибка при сохранении представления</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Format">
+    <Phrase key="IntegerRequired">Требуется целое число.</Phrase>
+    <Phrase key="IntegerInRangeRequired">Требуется целое число в диапазоне от {0} до {1}.</Phrase>
+    <Phrase key="RealRequired">Требуется вещественное число.</Phrase>
+    <Phrase key="NonemptyRequired">Требуется непустое значение.</Phrase>
+    <Phrase key="ValidUrlRequired">Требуется корректный URL.</Phrase>
+    <Phrase key="ValidRangeRequired">Требуется корректный диапазон целых чисел.</Phrase>
+    <Phrase key="DateTimeRequired">Требуется дата и время.</Phrase>
+    <Phrase key="NotNumber">Строка не является числом.</Phrase>
+    <Phrase key="NotHexadecimal">Строка не является 16-ричной записью.</Phrase>
+    <Phrase key="InvalidParamVal">Некорректное значение параметра &quot;{0}&quot;.</Phrase>
+    <Phrase key="InvalidSecretKey">Некорректный секретный ключ.</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Forms">
+    <Phrase key="InfoCaption">Информация</Phrase>
+    <Phrase key="QuestionCaption">Вопрос</Phrase>
+    <Phrase key="ErrorCaption">Ошибка</Phrase>
+    <Phrase key="WarningCaption">Предупреждение</Phrase>
+    <Phrase key="NoData">Нет данных</Phrase>
+    <Phrase key="EmptyData">Пусто</Phrase>
+    <Phrase key="CorrectErrors">Пожалуйста, исправьте следующие ошибки:</Phrase>
+    <Phrase key="HiddenPassword">*****</Phrase>
+    <Phrase key="NewConnection">Новое соединение</Phrase>
+    <Phrase key="UnnamedConnection">&lt;Безымянное соединение&gt;</Phrase>
+    <Phrase key="XmlFileFilter">Файлы XML (*.xml)|*.xml|Все файлы (*.*)|*.*</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.ComponentModel">
+    <Phrase key="TrueValue">Да</Phrase>
+    <Phrase key="FalseValue">Нет</Phrase>
+    <Phrase key="EmptyValue">(Нет)</Phrase>
+    <Phrase key="CollectionValue">(Коллекция)</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.CnlDataFormatter">
+    <Phrase key="UndefinedSign">---</Phrase>
+    <Phrase key="CommandDescrPrefix">Команда: </Phrase>
+    <Phrase key="StatusFormat">Статус {0}</Phrase>
+    <Phrase key="CriticalSeverity">Критическая</Phrase>
+    <Phrase key="MajorSeverity">Значительная</Phrase>
+    <Phrase key="MinorSeverity">Незначительная</Phrase>
+    <Phrase key="InfoSeverity">Информационная</Phrase>
+    <Phrase key="UnknownUser">Пользователь {0}</Phrase>
+  </Dictionary>
+  <!-- ScadaCommon.Forms.dll -->
+  <Dictionary key="Scada.Forms.Controls.CtrlBitmask">
+    <Phrase key="lblMaskValue">Десятичное значение</Phrase>
+    <Phrase key="btnResetMask">Сбросить</Phrase>
+    <Phrase key="lblMaskBits">Побитно</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Forms.Controls.CtrlClientConnection">
+    <Phrase key="gbConnectionOptions">Параметры соединения</Phrase>
+    <Phrase key="lblName">Наименование</Phrase>
+    <Phrase key="lblHost">Сервер</Phrase>
+    <Phrase key="lblPort">Порт</Phrase>
+    <Phrase key="lblTimeout">Таймаут</Phrase>
+    <Phrase key="lblUsername">Имя пользователя</Phrase>
+    <Phrase key="lblPassword">Пароль</Phrase>
+    <Phrase key="lblInstance">Экземпляр</Phrase>
+    <Phrase key="lblSecretKey">Секретный ключ</Phrase>
+    <Phrase key="btnPaste">Вставить</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Forms.Controls.CtrlDbConnection">
+    <Phrase key="gbConnectionOptions">Параметры соединения</Phrase>
+    <Phrase key="lblName">Наименование</Phrase>
+    <Phrase key="lblDbms">СУБД</Phrase>
+    <Phrase key="cbDbms.Items[0]">Не определена</Phrase>
+    <Phrase key="lblServer">Сервер</Phrase>
+    <Phrase key="lblDatabase">База данных</Phrase>
+    <Phrase key="lblUsername">Имя пользователя</Phrase>
+    <Phrase key="lblPassword">Пароль</Phrase>
+    <Phrase key="chkConnectionString">Строка соединения</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Forms.Controls.CtrlRegistration">
+    <Phrase key="lblProductName">Наименование продукта</Phrase>
+    <Phrase key="lblCompCode">Код компьютера</Phrase>
+    <Phrase key="btnCopyCompCode">Копировать</Phrase>
+    <Phrase key="btnRefreshCompCode">Обновить</Phrase>
+    <Phrase key="lblCompCodeInfo">Если код отсутствует, передайте конфигурацию и перезапустите службу.</Phrase>
+    <Phrase key="lblRegKey">Регистрационный ключ</Phrase>
+    <Phrase key="btnPasteRegKey">Вставить</Phrase>
+    <Phrase key="lblRegKeyInfo">Результат проверки ключа записывается в журнал приложения или модуля.</Phrase>
+    <Phrase key="llblGetPermanentKey">Получить постоянный ключ</Phrase>
+    <Phrase key="llblGetTrialKey">Получить пробный ключ</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Forms.Forms.FrmBitmask">
+    <Phrase key="this">Битовая маска</Phrase>
+    <Phrase key="btnOK">OK</Phrase>
+    <Phrase key="btnCancel">Отмена</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Forms.Forms.FrmBitSelect">
+    <Phrase key="this">Выбор бита</Phrase>
+    <Phrase key="btnOK">OK</Phrase>
+    <Phrase key="btnCancel">Отмена</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Forms.Forms.FrmCnlSelect">
+    <Phrase key="this">Выбор каналов</Phrase>
+    <Phrase key="lblFilter">Фильтр</Phrase>
+    <Phrase key="btnApplyFilter">Применить</Phrase>
+    <Phrase key="lblObj">Объект</Phrase>
+    <Phrase key="lblDevice">Устройство</Phrase>
+    <Phrase key="chkOnlySelected">Показывать только выбранные строки</Phrase>
+    <Phrase key="colSelected">Выбор</Phrase>
+    <Phrase key="colCnlNum">Номер</Phrase>
+    <Phrase key="colName">Наименование</Phrase>
+    <Phrase key="btnSelect">Выбрать</Phrase>
+    <Phrase key="btnCancel">Отмена</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Forms.Forms.FrmEntitySelect">
+    <Phrase key="this">Выбор из таблицы {0}</Phrase>
+    <Phrase key="lblFilter">Фильтр</Phrase>
+    <Phrase key="btnApplyFilter">Применить</Phrase>
+    <Phrase key="chkOnlySelected">Показывать только выбранные строки</Phrase>
+    <Phrase key="colSelected">Выбор</Phrase>
+    <Phrase key="colID">Идент.</Phrase>
+    <Phrase key="colName">Наименование</Phrase>
+    <Phrase key="colCode">Код</Phrase>
+    <Phrase key="colDescr">Описание</Phrase>
+    <Phrase key="btnSelect">Выбрать</Phrase>
+    <Phrase key="btnCancel">Отмена</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Forms.Forms.FrmModuleConfig">
+    <Phrase key="this">Конфигурация модуля</Phrase>
+    <Phrase key="btnAdd.ToolTip">Добавить</Phrase>
+    <Phrase key="btnMoveUp.ToolTip">Переместить вверх</Phrase>
+    <Phrase key="btnMoveDown.ToolTip">Переместить вниз</Phrase>
+    <Phrase key="btnDelete.ToolTip">Удалить</Phrase>
+    <Phrase key="btnSave">Сохранить</Phrase>
+    <Phrase key="btnCancel">Отмена</Phrase>
+    <Phrase key="btnClose">Закрыть</Phrase>
+    <Phrase key="miCollapseAll">Свернуть все</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Forms.Forms.FrmOptions">
+    <Phrase key="this">Параметры</Phrase>
+    <Phrase key="btnOK">OK</Phrase>
+    <Phrase key="btnCancel">Отмена</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Forms.Forms.FrmRangeEdit">
+    <Phrase key="this">Редактирование диапазона</Phrase>
+    <Phrase key="lblRange">Диапазон целых чисел</Phrase>
+    <Phrase key="lblExample">Например: 1 - 5, 10</Phrase>
+    <Phrase key="btnOK">OK</Phrase>
+    <Phrase key="btnCancel">Отмена</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Forms.BitItemCollection">
+    <Phrase key="EventEnabled">События разрешены</Phrase>
+    <Phrase key="EventBeep">Звук события</Phrase>
+    <Phrase key="DataChangeEvent">Данные канала изменились</Phrase>
+    <Phrase key="ValueChangeEvent">Значение канала изменилось</Phrase>
+    <Phrase key="StatusChangeEvent">Статус канала изменился</Phrase>
+    <Phrase key="CnlUndefinedEvent">Канал не определён</Phrase>
+    <Phrase key="CommandEvent">Команда отправлена</Phrase>
+  </Dictionary>
+</ScadaDictionaries>

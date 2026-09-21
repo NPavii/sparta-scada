@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScadaProject>
+  <AdminVersion>6.0.0.0</AdminVersion>
+  <ProjectVersion>6.0</ProjectVersion>
+  <Description>Sparta SCADA demo project with OPC UA and PostgreSQL archive</Description>
+  <Instances>
+    <Instance>
+      <ID>1</ID>
+      <Name>Default</Name>
+      <ServerApp enabled="true" />
+      <CommApp enabled="true" />
+      <WebApp enabled="false" />
+      <DeploymentProfile>Default Profile</DeploymentProfile>
+    </Instance>
+  </Instances>
+</ScadaProject>

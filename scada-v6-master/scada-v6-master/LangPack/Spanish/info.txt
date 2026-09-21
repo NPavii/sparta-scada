@@ -1,0 +1,5 @@
+Language                 : Spanish
+Culture name:            : es-ES
+Rapid SCADA version      : 6.3.0
+Rapid SCADA applications : All
+Author                   : https://konekta.cl

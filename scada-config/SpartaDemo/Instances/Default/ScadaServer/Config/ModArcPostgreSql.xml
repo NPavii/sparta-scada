@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ModArcPostgreSql>
+  <Connections>
+    <Connection>
+      <Name>PostgreConn</Name>
+      <DBMS>PostgreSQL</DBMS>
+      <Server>localhost</Server>
+      <Database>scada</Database>
+      <Username>scada</Username>
+      <Password>B9D0F030265751578B00E9801C69320C</Password>
+      <ConnectionString />
+    </Connection>
+  </Connections>
+</ModArcPostgreSql>

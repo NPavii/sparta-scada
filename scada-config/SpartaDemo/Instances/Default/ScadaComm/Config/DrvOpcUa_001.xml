@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OpcDeviceConfig>
+  <Subscriptions>
+    <Subscription active="true" displayName="Sparta Demo Subscription" publishingInterval="1000">
+      <Item active="true" nodeID="ns=3;s=StepUp" displayName="StepUp" tagCode="StepUp" dataType="System.UInt64" isArray="false" />
+      <Item active="true" nodeID="ns=3;s=AlternatingBoolean" displayName="AlternatingBoolean" tagCode="AlternatingBoolean" dataType="System.Boolean" isArray="false" />
+      <Item active="true" nodeID="ns=3;s=RandomSignedInt32" displayName="RandomSignedInt32" tagCode="RandomSignedInt32" dataType="System.Int32" isArray="false" />
+      <Item active="true" nodeID="ns=3;s=DipData" displayName="DipData" tagCode="DipData" dataType="System.Double" isArray="false" />
+      <Item active="true" nodeID="ns=3;s=SpikeData" displayName="SpikeData" tagCode="SpikeData" dataType="System.Double" isArray="false" />
+      <Item active="true" nodeID="ns=3;s=SlowUInt1" displayName="SlowUInt1" tagCode="SlowUInt1" dataType="System.UInt32" isArray="false" />
+    </Subscription>
+  </Subscriptions>
+  <Commands />
+</OpcDeviceConfig>

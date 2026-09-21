@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>disable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <RootNamespace>Sparta.ConfigDeployer</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="ScadaAdminCommon">
+      <HintPath>..\..\scada-v6-master\scada-v6-master\ScadaAdmin\ScadaAdmin\ScadaAdminCommon\bin\Release\net10.0-windows\ScadaAdminCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="ScadaCommon">
+      <HintPath>..\..\scada-v6-master\scada-v6-master\ScadaCommon\ScadaCommon\bin\Release\net10.0\ScadaCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="ScadaCommon.Forms">
+      <HintPath>..\..\scada-v6-master\scada-v6-master\ScadaCommon\ScadaCommon.Forms\bin\Release\net10.0-windows\ScadaCommon.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="ScadaCommon.Log">
+      <HintPath>..\..\scada-v6-master\scada-v6-master\ScadaCommon\ScadaCommon.Log\bin\Release\net10.0\ScadaCommon.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="ScadaServerCommon">
+      <HintPath>..\..\scada-v6-master\scada-v6-master\ScadaServer\ScadaServer\ScadaServerCommon\bin\Release\net10.0\ScadaServerCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="ScadaCommCommon">
+      <HintPath>..\..\scada-v6-master\scada-v6-master\ScadaComm\ScadaComm\ScadaCommCommon\bin\Release\net10.0\ScadaCommCommon.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

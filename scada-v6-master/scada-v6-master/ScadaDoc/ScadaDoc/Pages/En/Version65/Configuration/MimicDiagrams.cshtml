@@ -1,0 +1,472 @@
+﻿@page "/en/latest/configuration/mimic-diagrams"
+@{
+    Layout = "_ArticleLayout";
+    ViewBag.Title = "Mimic Diagrams";
+}
+
+@section Styles {
+    <link href="~/lib/prismjs/prism.css" rel="stylesheet" />
+}
+
+@section Scripts {
+    <script src="~/lib/prismjs/prism.js"></script>
+}
+
+<nav class="doc-toc">
+    <div class="h6">On this page</div>
+    <hr>
+    <ul>
+        <li><a href="#plugin-settings">Plugin Settings</a></li>
+        <li><a href="#creating-mimic">Creating Mimic Diagram</a></li>
+        <li><a href="#components">Components</a></li>
+        <li><a href="#faceplates">Faceplates</a></li>
+        <li><a href="#data-binding">Data Binding</a></li>
+        <li><a href="#scripts">Scripts</a></li>
+        <li><a href="#mimic-editor">Mimic Editor</a></li>
+        <li><a href="#mimic-templates">Mimic Diagram Templates</a></li>
+    </ul>
+</nav>
+
+<div class="doc-content">
+    <h1>Mimic Diagrams</h1>
+    <p>A <strong>mimic diagram</strong> is a graphical operator interface that represents a real-time schematic representation of a technological process or control object. It displays the current status of equipment, parameter values, and the relationships between system elements using symbols and animated elements.</p>
+    <p>In Rapid SCADA terms, a mimic diagram is a <a href="views">view</a>. Mimic diagram elements are bound to <a href="channels">channels</a> and display the state of an automation object based on current data.</p>
+
+    <h2 id="plugin-settings">Plugin Settings</h2>
+    <p>The operation of mimic diagrams is provided by several plugins of the Webstation application:</p>
+    <ul>
+        <li>Mimic Diagrams Plugin (PlgMimic) is responsible for mimic diagrams in runtime mode.</li>
+        <li>Mimic Editor Plugin (PlgMimicEditor) allows users to create and modify mimic diagrams.</li>
+        <li>Basic Mimic Components Plugin (PlgMimBasicComp) provides a minimum set of the necessary components.</li>
+        <li>Extra Mimic Components Plugin (PlgMimExtraComp) extends the library with additional components.</li>
+    </ul>
+
+    <p>The <code>PlgMimic.xml</code> configuration file contains settings used by the Mimic Diagrams and Mimic Editor plugins. This file is included in the project template, so when a new project is created, the configuration file is added with default settings. Mimic component plugins do not require configuration.</p>
+    <p>The following table describes the contents of the <code>PlgMimic.xml</code> file:</p>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>XML element</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>GeneralOptions</strong></td>
+                <td>Section for the main parameters of mimics used in runtime and edit modes.</td>
+            </tr>
+            <tr>
+                <td>CustomCss</td>
+                <td>Path to the custom CSS file.</td>
+            </tr>
+            <tr>
+                <td>CustomJs</td>
+                <td>Path to the custom JavaScript file.</td>
+            </tr>
+            <tr>
+                <td><strong>Fonts</strong></td>
+                <td>Section for the fonts used by mimics.</td>
+            </tr>
+            <tr>
+                <td><strong>Font</strong></td>
+                <td>Element that defines a font.</td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td>Name of the font in the editor.</td>
+            </tr>
+            <tr>
+                <td>family</td>
+                <td>Font family designation in the HTML document.</td>
+            </tr>
+            <tr>
+                <td>url</td>
+                <td>Path to the font CSS file.</td>
+            </tr>
+            <tr>
+                <td><strong>RuntimeOptions</strong></td>
+                <td>Section for runtime parameters.</td>
+            </tr>
+            <tr>
+                <td>ScaleType</td>
+                <td>Default scaling type.</td>
+            </tr>
+            <tr>
+                <td>ScaleValue</td>
+                <td>Default scale value.</td>
+            </tr>
+            <tr>
+                <td>RememberScale</td>
+                <td>Saves the scale.</td>
+            </tr>
+            <tr>
+                <td>ShowToolbar</td>
+                <td>Displays the mimic toolbar.</td>
+            </tr>
+            <tr>
+                <td>BlinkingRate</td>
+                <td>Blinking rate of components in milliseconds, if the corresponding property is set.</td>
+            </tr>
+            <tr>
+                <td><strong>EditorOptions</strong></td>
+                <td>Section for editor parameters.</td>
+            </tr>
+            <tr>
+                <td>UseGrid</td>
+                <td>Uses a grid for component layout.</td>
+            </tr>
+            <tr>
+                <td>ShowGrid</td>
+                <td>Displays the grid.</td>
+            </tr>
+            <tr>
+                <td>GridStep</td>
+                <td>Grid step in pixels.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Paths to custom CSS and JavaScript files, specified by the <code>CustomCss</code> and <code>CustomJs</code> options, begin with a tilde, which denotes the root of the web application. These paths may be empty. The custom files themselves must be located within the <code>ScadaWeb\wwwroot\</code> directory. To add multiple style and script files, merge them into a single file using third-party tools.</p>
+
+    <h2 id="creating-mimic">Creating Mimic Diagram</h2>
+    <p>To create a new mimic diagram, go to the <strong>Views</strong> section of the project in the Administrator application, right-click the desired folder, and select <strong>New File</strong> from the context menu. In the window that opens (see Figure 1), select the <em>Mimic Diagram</em> view type, specify a file name, and click <strong>OK</strong>. The created file will appear in the project explorer.</p>
+
+    <figure class="figure">
+        <img src="mimic-diagrams-files/new-mimic-en.png" class="figure-img img-fluid" alt="View creation dialog" />
+        <figcaption class="figure-caption">Figure 1. View creation dialog</figcaption>
+    </figure>
+
+    <p>Once the view file is created, double-click the file to open it in a web browser in <a href="#mimic-editor">Mimic Editor</a>. The Webstation application must be installed and running on the same computer where the Administrator application is running.</p>
+    
+    <h2 id="components">Components</h2>
+    <p>A <strong>component</strong> is an interactive graphic object within a mimic diagram that dynamically displays the state of a specific device or parameter in real time and allows for its manipulation. It is the building block of a mimic diagram.</p>
+    <p>Components in Mimic Editor are divided into groups depending on the plugin they are implemented in. Components in the <strong>Standard</strong> group are implemented in Mimic Diagrams Plugin. Components in the <strong>Basic</strong> and <strong>Extra</strong> groups are implemented in plugins with corresponding names.</p>
+    <p>The table below contains a brief description of the components.</p>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Component</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2"><strong>Standard components</strong></td>
+            </tr>
+            <tr>
+                <td>Panel</td>
+                <td>Designed to host child components for grouping purposes. Can be nested within one another.</td>
+            </tr>
+            <tr>
+                <td>Picture</td>
+                <td>Displays a graphic. The picture can be static or dynamic based on specified conditions. The recommended format is SVG. PNG and GIF formats are also supported, including animated graphics.</td>
+            </tr>
+            <tr>
+                <td>Text</td>
+                <td>Displays a text string. The text can be static, display a bound channel value, or switch dynamically based on conditions.</td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>Basic components</strong></td>
+            </tr>
+            <tr>
+                <td>Button</td>
+                <td>Represents a control button used to issue telecontrol commands, trigger pop-up windows, or execute other actions.</td>
+            </tr>
+            <tr>
+                <td>Led</td>
+                <td>A circular or rectangular status indicator that changes its color according to the value of a bound channel based on predefined conditions.</td>
+            </tr>
+            <tr>
+                <td>Toggle</td>
+                <td>A two-position switch that transmits telecontrol commands when toggled.</td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>Extra components</strong></td>
+            </tr>
+            <tr>
+                <td>Frame</td>
+                <td>Designed to embed external web pages into a mimic diagram, including charts or other views.</td>
+            </tr>
+            <tr>
+                <td>Gauge</td>
+                <td>An analog dial instrument. The background graphic, scale, and pointer needle are fully customizable.</td>
+            </tr>
+            <tr>
+                <td>Level</td>
+                <td>Displays the current value of a bound channel as a vertical or horizontal fill level.</td>
+            </tr>
+            <tr>
+                <td>Markup</td>
+                <td>Designed for embedding custom HTML code snippet blocks. Highly useful for building custom faceplates.</td>
+            </tr>
+            <tr>
+                <td>Trend</td>
+                <td>Plots a real-time historical trend chart of a given parameter.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="faceplates">Faceplates</h2>
+    <p>A <strong>faceplate</strong> is a user-created component based on other components for reuse in various mimic diagrams. Changes made to the faceplate are reflected in the mimic in which it is used.</p>
+    <p>Faceplates are created from the Administrator application and edited in Mimic Editor, similar to mimics diagrams. To create a faceplate, open the file creation dialog described above (Figure 1), select the <em>Faceplate</em> type, specify a file name, and click <strong>OK</strong>. Then, double-click the created file to open it in the editor.</p>
+    <p>Faceplates can export user-defined properties. The corresponding faceplate property in the editor is called <strong>Exported properties</strong>. When a faceplate is added to a mimic diagram, custom properties for the faceplate instance are created based on the exported properties and displayed in the properties table in the <strong>Misc</strong> category.</p>
+    <p>Each exported property is a structure whose fields are described in the following table:</p>
+    
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Property name</td>
+                <td>Required field. Can contain Latin characters and numbers, must start with a letter, periods are not allowed.</td>
+            </tr>
+            <tr>
+                <td>Path</td>
+                <td>Links the exported faceplate property and the target property of the child component. Contains the name of the child component and its property name, separated by periods. When the value of the exported property changes, the target property changes. The value of the target property is used as the default value for the exported property.</td>
+            </tr>
+            <tr>
+                <td>Default value</td>
+                <td>Used if the path is empty and the exported property is handled by a script.</td>
+            </tr>
+            <tr>
+                <td>Default binding</td>
+                <td>Helps to preconfigure the <a href="#data-binding">data binding</a> that is created in the faceplate instance when it is added to the mimic diagram.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="data-binding">Data Binding</h2>
+    <p>To dynamically display a parameter value in real time, component properties must be bound to data. Each component has a corresponding list property called <strong>Property bindings</strong>.</p>
+    <p>Structure of a single property binding:</p>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Property name</td>
+                <td>Required field. For properties with a complex structure, the full name is separated by periods.</td>
+            </tr>
+            <tr>
+                <td>Data source</td>
+                <td>This is the channel number, part of the channel code, or the tag code.</td>
+            </tr>
+            <tr>
+                <td>Data member</td>
+                <td>Determines which part of the channel data is used to build the property value.</td>
+            </tr>
+            <tr>
+                <td>Expression</td>
+                <td>Transforms the value using JavaScript.</td>
+            </tr>
+            <tr>
+                <td>Format</td>
+                <td>Transforms the string according to a format, for example, <code>Hello {0} world</code>. Works only for string properties.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>The argument passed to the expression depends on the data member selected. After the expression is evaluated, the format, if specified, is applied to the result.</p>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Data member</th>
+                <th>Expression argument</th>
+                <th>Expression example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Value</td>
+                <td>Numeric channel value or <code>Number.NaN</code> if the channel status is 0</td>
+                <td><code>isNaN(x) ? &quot;None&quot; : x * 2</code></td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td>Channel status, a number</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Data</td>
+                <td>Channel value and status, an object <code>{ val, stat }</code></td>
+                <td><code>x.stat > 0 ? x.val * 2 : &quot;None&quot;</code></td>
+            </tr>
+            <tr>
+                <td>Display value</td>
+                <td>String</td>
+                <td><code>&quot;Value: &quot; + x</code></td>
+            </tr>
+            <tr>
+                <td>Value with unit</td>
+                <td>String</td>
+                <td><code>&quot;Value and unit: &quot; + x</code></td>
+            </tr>
+            <tr>
+                <td>Main color</td>
+                <td>String</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Second color</td>
+                <td>String</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Back color</td>
+                <td>String</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Binding component properties works differently depending on which property from the <strong>Data</strong> category is set:</p>
+    <ol>
+        <li>The <strong>Object number</strong> is specified. The <strong>Data source</strong> field in the binding contains a portion of the channel code. The application determines the channel number as follows: a string from the data source is appended to the object code, and the channel is searched for by the code among the channels of the specified object.</li>
+        <li>The <strong>Device number</strong> is specified. The <strong>Data source</strong> field in the binding contains the tag code. The channel number is determined by the device number and tag code.</li>
+        <li>The <strong>Input channel</strong> is specified. If the object or device number is not specified, the data source in the binding must contain a specific channel number.</li>
+    </ol>
+
+    <p>For some properties, data binding is not available. These are properties from the <strong>Data</strong> and <strong>Design</strong> categories, scripts. Such properties are marked in gray in the property selection dialog.</p>
+
+    <h3>Default Property Binding</h3>
+    <p>Many components support simplified default property binding. If the <strong>Input channel</strong> property is specified, the component can implicitly bind its properties to the data in that channel. If binding for a component property is explicitly specified, no default binding is created for that property.</p>
+    <p>For example, if an input channel is specified for a <strong>Text</strong> component, its text and color will be displayed according to the channel value and status. The value is displayed with the unit. Therefore, for a text component, default bindings are created for the <strong>Text</strong> and <strong>Main color</strong> properties.</p>
+
+    <h2 id="scripts">Scripts</h2>
+    <h3>Mimic Diagram and Component Scripts</h3>
+    <p>The <strong>Script</strong> property is available for a mimic diagram, faceplates, and all components. Scripts are designed to implement custom functionality. If a custom script contains an error, the mimic diagram remains operational.</p>
+    <p>All custom scripts must inherit from the <code>ComponentScript</code> base class, which provides the following methods:</p>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>Arguments</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><pre>domCreated(args)</pre></td>
+                <td><pre>{
+  mimic,
+  component,
+  renderContext
+}</pre></td>
+                <td>Called once immediately after the mimic or component DOM is created. For a faceplate, this method is called after similar methods of its components have been called.</td>
+            </tr>
+            <tr>
+                <td><pre>domUpdated(args)</pre></td>
+                <td><pre>{
+  mimic,
+  component,
+  renderContext
+}</pre></td>
+                <td>Called immediately after the component DOM is updated. For a mimic diagram, this method is not actually called. For a faceplate, it is called after similar methods of its components have been called.</td>
+            </tr>
+            <tr>
+                <td><pre>dataUpdated(args)</pre></td>
+                <td><pre>{
+  mimic,
+  component,
+  dataProvider,
+  propertyChanged,
+  handled
+}</pre></td>
+                <td>Called for a component after its data is updated. For a mimic diagram, this method is called after all component data is updated. If a component property has changed, set <code>args.propertyChanged = true</code> to visually update the component. Setting <code>args.handled = true</code> prevents the component's own script from being called.</td>
+            </tr>
+            <tr>
+                <td><pre>getCommandValue(args)</pre></td>
+                <td><pre>{ component }</pre></td>
+                <td>Returns the command value to be sent. This method is called when sending a command without displaying a dialog box.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>The <code>domCreated</code> and <code>domUpdated</code> methods are called for the mimic, components, and child components of faceplates in both runtime and edit mode. However, if the faceplate itself is open for editing, these methods are not called to avoid argument ambiguity: <code>args.component</code> is available in runtime, while <code>args.mimic</code> is available when editing.</p>
+    <p>Example of a custom script for a <strong>Text</strong> component:</p>
+    <pre><code class="language-javascript">class extends ComponentScript {
+  domCreated(args) {
+    console.log("DOM created for component " + args.component.id);
+  }
+
+  domUpdated(args) {
+    console.log("DOM updated for component " + args.component.id);
+  }
+
+  dataUpdated(args) {
+    const props = args.component.properties;
+    const cnlData = args.dataProvider.getCurData(props.inCnlNum);
+    const blinking = cnlData.d.stat > 0 && cnlData.d.val >= 10;
+
+    if (props.blinking !== blinking) {
+      props.blinking = blinking;
+      args.propertyChanged = true;
+    }
+  }
+}</code></pre>
+
+    <h3>Action Script</h3>
+    <p>An action script is a script that executes when a component is clicked. The script is compiled Just-in-Time when the action is called. The script code must contain a function, for example:</p>
+    <pre><code class="language-javascript">function (args) {
+  args.renderContext.viewHub.features.chart.show(args.component.properties.inCnlNum);
+}</code></pre>
+
+    <p>The function argument is an object <code>{ component, renderContext }</code></p>
+
+    <h2 id="mimic-editor">Mimic Editor</h2>
+    <p>Mimic Editor is a plugin running under the Webstation application. The editor opens mimic and faceplate files located locally on the same computer where the Administrator and Webstation applications are installed. The <em>Administrator</em> role is required for a web application user to edit mimics.</p>
+
+    <figure class="figure">
+        <img src="mimic-diagrams-files/mimic-editor-en.png" class="figure-img img-fluid" alt="Mimic Editor" />
+        <figcaption class="figure-caption">Figure 2. Mimic Editor</figcaption>
+    </figure>
+
+    <p>At the top of the web page is a toolbar with buttons for performing basic actions. On the left are tool windows: <strong>Components</strong>, <strong>Structure</strong> (Figure 3), and <strong>Properties</strong> (Figure 4). In the central part of the web page is an editable mimic diagram.</p>
+
+    <figure class="figure">
+        <img src="mimic-diagrams-files/mimic-structure-en.png" class="figure-img img-fluid" alt="Mimic structure" />
+        <figcaption class="figure-caption">Figure 3. Mimic structure</figcaption>
+    </figure>
+
+    <figure class="figure">
+        <img src="mimic-diagrams-files/component-properties-en.png" class="figure-img img-fluid" alt="Component properties" />
+        <figcaption class="figure-caption">Figure 4. Component properties</figcaption>
+    </figure>
+
+    <p>The most convenient way to open a mimic diagram in the editor is to double-click the file being edited in the Administrator application. Alternatively, open the mimic through the web application by selecting <strong>Main Menu &gt; Mimic Editor &gt; Active Mimics</strong> and specifying the path to the file on disk.</p>
+    
+    <div class="alert alert-warning">
+        <p><strong>Important</strong></p>
+        <p class="mb-0">When a project is uploaded for execution, the web application restarts, and open mimic diagrams are closed without saving changes. This feature must be taken into account.</p>
+    </div>
+
+    <h3>Changing Location and Size of Components</h3>
+    <p>Components are selected by clicking on a component in the mimic or structure window. To select multiple components, hold down the <kbd>Ctrl</kbd> key and left-click.</p>
+    <p>Selected components can be moved by dragging with the mouse or using hotkeys:</p>
+    <ul>
+        <li>The arrow keys move the selected components by the grid size.</li>
+        <li>While holding down <kbd>Ctrl</kbd>, the arrow keys move components by 1 pixel.</li>
+        <li>While holding down <kbd>Shift</kbd>, use the arrow keys to resize components.</li>
+    </ul>
+
+    <h2 id="mimic-templates">Mimic Templates</h2>
+    <p>The same mimic diagram file <code>*.mim</code> can be used to create multiple mimic views whose channels and title differ from the original. Such a file is called a mimic template.</p> 
+    <p>
+        To use a mimic diagram as a template, set the <strong>Arguments</strong> field in the <strong>Views</strong> table. Example of view arguments: <code>cnlOffset=100&titleCompID=1</code>, where<br />
+        <code>cnlOffset</code> is the channel number offset,<br />
+        <code>titleCompID</code> is the identifier of the text component for displaying the title.
+    </p> 
+    <p>Arguments are applied on the server side when the view is loaded. Channel number offset is performed if the channels for a component are specified explicitly, and the object and device numbers in the component properties are equal to 0. The title text for a mimic diagram operating on a template basis is taken from the <strong>Title</strong> field of the <strong>Views</strong> table.</p>
+</div>

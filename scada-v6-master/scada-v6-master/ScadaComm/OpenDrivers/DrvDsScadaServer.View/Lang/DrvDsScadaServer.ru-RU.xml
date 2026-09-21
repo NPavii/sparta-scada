@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DrvDsScadaServerDictionaries>
+  <Dictionary key="Scada.Comm.Drivers.DrvDsScadaServer.View.Forms.FrmConnManager">
+    <Phrase key="this">Соединения клиентов</Phrase>
+    <Phrase key="gbConnList">Соединения</Phrase>
+    <Phrase key="btnNewConn">Добавить</Phrase>
+    <Phrase key="btnDeleteConn">Удалить</Phrase>
+    <Phrase key="btnOK">OK</Phrase>
+    <Phrase key="btnCancel">Отмена</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Comm.Drivers.DrvDsScadaServer.View.Forms.FrmScadaServerDSO">
+    <Phrase key="this">Параметры источника данных</Phrase>
+    <Phrase key="lblReadConfigDb">Считать базу конфигурации</Phrase>
+    <Phrase key="lblUseDefaultConn">Соединение по умолчанию</Phrase>
+    <Phrase key="lblConnection">Соединение</Phrase>
+    <Phrase key="lblMaxQueueSize">Макс. размер очереди</Phrase>
+    <Phrase key="lblDataLifetime">Время жизни данных в очереди, с</Phrase>
+    <Phrase key="lblClientLogEnabled">Журнал клиента включен</Phrase>
+    <Phrase key="lblDeviceFilter">Фильтр устройств</Phrase>
+    <Phrase key="btnSelectDevices">Выбрать...</Phrase>
+    <Phrase key="btnManageConn">Соединения</Phrase>
+    <Phrase key="btnOK">OK</Phrase>
+    <Phrase key="btnCancel">Отмена</Phrase>
+  </Dictionary>
+</DrvDsScadaServerDictionaries>

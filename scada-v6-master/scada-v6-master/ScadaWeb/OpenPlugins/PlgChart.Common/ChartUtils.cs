@@ -1,0 +1,87 @@
+﻿// Copyright (c) Rapid Software LLC. All rights reserved.
+// Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
+
+using Scada.Data.Models;
+using System.Web;
+
+namespace Scada.Web.Plugins.PlgChart
+{
+    /// <summary>
+    /// The class provides helper methods for charts.
+    /// <para>Класс, предоставляющий вспомогательные методы для графиков.</para>
+    /// </summary>
+    public static class ChartUtils
+    {
+        /// <summary>
+        /// Formats local date and time to use in JavaScript.
+        /// </summary>
+        public const string LocalTimeFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss";
+        /// <summary>
+        /// Formats local date to use in JavaScript.
+        /// </summary>
+        public const string LocalDateFormat = "yyyy'-'MM'-'dd";
+
+
+        /// <summary>
+        /// Encodes a string to be inserted in JavaScript.
+        /// </summary>
+        public static string JsEncode(this string s)
+        {
+            return HttpUtility.JavaScriptStringEncode(s);
+        }
+
+        /// <summary>
+        /// Gets the chart start date as UTC.
+        /// </summary>
+        public static DateTime GetUtcStartDate(DateTime startDate, TimeZoneInfo timeZone)
+        {
+            if (startDate == DateTime.MinValue)
+                startDate = DateTime.UtcNow;
+
+            if (startDate.Kind == DateTimeKind.Utc)
+                startDate = TimeZoneInfo.ConvertTimeFromUtc(startDate, timeZone);
+
+            startDate = startDate.Date;
+
+            if (timeZone.IsInvalidTime(startDate))
+                startDate = startDate.AddHours(1);
+
+            return TimeZoneInfo.ConvertTimeToUtc(startDate, timeZone);
+        }
+
+        /// <summary>
+        /// Gets the chart time range.
+        /// </summary>
+        public static TimeRange GetTimeRange(DateTime startDate, int periodInDays, bool endInclusive)
+        {
+            return periodInDays switch
+            {
+                > 0 => new TimeRange(startDate, startDate.AddDays(periodInDays), endInclusive),
+                0 or -1 => new TimeRange(startDate, startDate.AddDays(1), endInclusive),
+                _ => new TimeRange(startDate.AddDays(periodInDays + 1), startDate.AddDays(1), endInclusive)
+            };
+        }
+
+        /// <summary>
+        /// Converts the specified value to a local time string.
+        /// </summary>
+        public static string ToLocalTimeString(this DateTime dateTime, TimeZoneInfo timeZone)
+        {
+            if (dateTime.Kind == DateTimeKind.Utc)
+                dateTime = TimeZoneInfo.ConvertTimeFromUtc(dateTime, timeZone);
+
+            return dateTime.ToString(LocalTimeFormat);
+        }
+
+        /// <summary>
+        /// Converts the specified value to a local date string.
+        /// </summary>
+        public static string ToLocalDateString(this DateTime dateTime, TimeZoneInfo timeZone)
+        {
+            if (dateTime.Kind == DateTimeKind.Utc)
+                dateTime = TimeZoneInfo.ConvertTimeFromUtc(dateTime, timeZone);
+
+            return dateTime.ToString(LocalDateFormat);
+        }
+    }
+}

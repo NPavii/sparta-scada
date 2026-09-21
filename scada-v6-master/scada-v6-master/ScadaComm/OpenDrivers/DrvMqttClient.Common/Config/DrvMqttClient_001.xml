@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MqttClientDeviceConfig>
+  <DeviceOptions>
+    <RootTopic></RootTopic>
+  </DeviceOptions>
+  <Subscriptions>
+    <Subscription topic="myparam1" displayName="MyParam1" qosLevel="0" retain="false" tagCode="myparam1" readOnly="false" />
+    <Subscription topic="myparam2" displayName="MyParam2" qosLevel="0" retain="false" tagCode="myparam2" readOnly="true" jsEnabled="true" jsFileName="MyParam2.js">
+      <SubItem>Item1</SubItem>
+      <SubItem>Item2</SubItem>
+    </Subscription>
+  </Subscriptions>
+  <Commands>
+    <Command topic="mycmd1" displayName="MyCmd1" qosLevel="0" retain="false" cmdCode="mycmd1" />
+  </Commands>
+</MqttClientDeviceConfig>

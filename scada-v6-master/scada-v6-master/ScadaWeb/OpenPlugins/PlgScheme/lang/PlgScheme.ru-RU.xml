@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PlgSchemeDictionaries>
+  <Dictionary key="Scada.Web.Plugins.PlgScheme.Areas.Scheme.Pages.SchemeView">
+    <Phrase key="SchemeViewTitle">Схема {0}</Phrase>
+    <Phrase key="spanFitScreenBtn_ToolTip">По размеру экрана</Phrase>
+    <Phrase key="spanFitWidthBtn_ToolTip">По ширине</Phrase>
+    <Phrase key="spanZoomOutBtn_ToolTip">Уменьшить</Phrase>
+    <Phrase key="spanZoomInBtn_ToolTip">Увеличить</Phrase>
+    <Phrase key="spanErrorBadge">Ошибка</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Plugins.PlgScheme.Template.TemplateBindings">
+    <Phrase key="LoadTemplateBindingsError">Ошибка при загрузке привязок шаблона схемы</Phrase>
+    <Phrase key="SaveTemplateBindingsError">Ошибка при сохранении привязок шаблона схемы</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Web.Plugins.PlgScheme.CompManager">
+    <Phrase key="UnknownComponent">Неизвестный компонент {0}</Phrase>
+    <Phrase key="CompLibraryNotFound">Не найдена библиотека для компонента {0}</Phrase>
+    <Phrase key="UnableCreateComponent">Невозможно создать компонент {0}</Phrase>
+    <Phrase key="ErrorCreatingComponent">Ошибка при создании компонента {0}</Phrase>
+  </Dictionary>
+</PlgSchemeDictionaries>

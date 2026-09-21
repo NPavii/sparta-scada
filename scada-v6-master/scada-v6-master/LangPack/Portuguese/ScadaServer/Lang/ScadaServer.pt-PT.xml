@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ScadaServerDictionaries>
+  <!-- ScadaServerCommon.dll -->
+  <Dictionary key="Scada.Server.Archives">
+    <Phrase key="UnspecifiedArchiveKind">não especificado</Phrase>
+    <Phrase key="CurrentArchiveKind">Atual</Phrase>
+    <Phrase key="HistoricalArchiveKind">Histórico</Phrase>
+    <Phrase key="EventsArchiveKind">Eventos</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Server.Modules">
+    <Phrase key="LoadModuleConfigError">Erro ao carregar a configuração do módulo</Phrase>
+    <Phrase key="SaveModuleConfigError">Erro ao salvar a configuração do módulo</Phrase>
+    <Phrase key="SaveModuleConfigConfirm">A configuração do módulo foi modificada.  Salvar as alterações?</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Server.Engine.CoreLogic">
+    <Phrase key="CommandSentBy">Enviado por {0}</Phrase>
+    <Phrase key="EmptyCredentials">O nome de usuário ou a senha não podem estar vazios</Phrase>
+    <Phrase key="InvalidCredentials">nome de usuário ou senha inválidos</Phrase>
+    <Phrase key="AccountDisabled">Conta esta desabilitada</Phrase>
+  </Dictionary>
+  <!-- ScadaServerCommon.Forms.dll -->
+  <Dictionary key="Scada.Server.Forms.Controls.CtrlCurrentArchiveOptions">
+    <Phrase key="lblReadOnly">Somente leitura</Phrase>
+    <Phrase key="lblLogEnabled">Registro ativado</Phrase>
+    <Phrase key="lblFlushPeriod">Período de descarga</Phrase>
+    <Phrase key="txtFlushPeriodUnit">segundo</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Server.Forms.Controls.CtrlEventArchiveOptions">
+    <Phrase key="lblReadOnly">Somente leitura</Phrase>
+    <Phrase key="lblLogEnabled">Registro ativado</Phrase>
+    <Phrase key="lblRetention">Período de retenção</Phrase>
+    <Phrase key="txtRetentionUnit">Dia</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Server.Forms.Controls.CtrlHistoricalArchiveOptions">
+    <Phrase key="lblReadOnly">Somente leitura</Phrase>
+    <Phrase key="lblLogEnabled">Registro ativado</Phrase>
+    <Phrase key="lblRetention">Período de retenção</Phrase>
+    <Phrase key="txtRetentionUnit">Dia</Phrase>
+    <Phrase key="lblIsPeriodic">Apenas dados periódicos</Phrase>
+    <Phrase key="lblWriteWithPeriod">Escreva com ponto final</Phrase>
+    <Phrase key="lblUsePeriodStartTime">Carimbo de data e hora no início do período</Phrase>
+    <Phrase key="lblWritingPeriod">Período de escrita</Phrase>
+    <Phrase key="cbWritingPeriodUnit.Items[0]">Segundo</Phrase>
+    <Phrase key="cbWritingPeriodUnit.Items[1]">Mínimo</Phrase>
+    <Phrase key="cbWritingPeriodUnit.Items[2]">Hora</Phrase>
+    <Phrase key="cbWritingPeriodUnit.Items[3]">Dia</Phrase>
+    <Phrase key="lblWritingOffset">Deslocamento de escrita</Phrase>
+    <Phrase key="cbWritingOffsetUnit.Items[0]">Segundo</Phrase>
+    <Phrase key="cbWritingOffsetUnit.Items[1]">Mínimo</Phrase>
+    <Phrase key="cbWritingOffsetUnit.Items[2]">Hora</Phrase>
+    <Phrase key="cbWritingOffsetUnit.Items[3]">Dia</Phrase>
+    <Phrase key="lblPullToPeriod">Puxe para o período</Phrase>
+    <Phrase key="txtPullToPeriodUnit">Segundo</Phrase>
+    <Phrase key="lblWriteOnChange">Escreva na mudança</Phrase>
+    <Phrase key="lblDeadband">Zona morta</Phrase>
+    <Phrase key="cbDeadbandUnit.Items[0]">Abdominais.</Phrase>
+    <Phrase key="cbDeadbandUnit.Items[1]">%</Phrase>
+  </Dictionary>
+</ScadaServerDictionaries>

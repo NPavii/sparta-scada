@@ -1,0 +1,37 @@
+﻿@page
+@inject IUserContext userContext
+@model ReportsModel
+@{
+    Layout = "_MainLayout";
+    dynamic dict = Locale.GetDictionary("Scada.Web.Pages.Reports");
+    ViewBag.Title = dict.PageTitle;
+    var reportItems = userContext.Reports.ToFlatList();
+}
+
+@section Styles {
+    <link href="~/css/pages/reports.min.css" rel="stylesheet" asp-append-version="true" />
+}
+
+<h1>@dict.PageTitle</h1>
+
+@if (reportItems.Count > 0)
+{
+    foreach (var reportItem in reportItems)
+    {
+        if (reportItem.Subitems.Count > 0)
+        {
+            // header
+            var headerClass = "h" + (reportItem.Level + 2);
+            <div class="@headerClass">@reportItem.Text</div>
+        }
+        else
+        {
+            // report
+            <div class="item-rep"><span class="item-bullet">&#9679;</span><a href="@Url.Content(reportItem.Url)">@reportItem.Text</a></div>
+        }
+    }
+}
+else
+{
+    <div>@dict.NoReports</div>
+}

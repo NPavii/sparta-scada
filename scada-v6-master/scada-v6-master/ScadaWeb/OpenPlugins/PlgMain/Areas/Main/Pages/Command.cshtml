@@ -1,0 +1,135 @@
+﻿@page
+@model CommandModel
+@inject PluginContext pluginContext 
+@{
+    Layout = "_BasicLayout";
+    dynamic dict = Locale.GetDictionary("Scada.Web.Plugins.PlgMain.Areas.Main.Pages.Command");
+    ViewBag.Title = dict.PageTitle;
+    ViewBag.BodyCssClass = "modal-page";
+
+    var messageNotEmpty = !string.IsNullOrEmpty(Model.Message);
+    var pwdExtraClass = Model.PwdIsInvalid ? "is-invalid" : "";
+    var cmdExtraClass = Model.CmdIsInvalid ? "is-invalid" : "";
+}
+
+@section Styles {
+    <link href="~/plugins/Main/css/command.min.css" rel="stylesheet" asp-append-version="true" />
+}
+
+@section Scripts {
+    <script src="~/js/components/modal.js" asp-append-version="true"></script>
+    <script src="~/plugins/Main/js/command.js" asp-append-version="true"></script>
+    <script>
+        hideExecBtn = @((Model.Input == CommandModel.InputType.Enum).ToLowerString());
+        updateHeight = @messageNotEmpty.ToLowerString();
+        closeModal = @Model.CloseModal.ToLowerString();
+    </script>
+}
+
+@if (messageNotEmpty)
+{
+    var alertClass = Model.HasError ? "alert-danger" : "alert-success";
+    <div class="alert @alertClass">@Model.Message</div>
+}
+
+@if (Model.Cnl != null)
+{
+    const string NameFormat = "[{0}] {1}";
+    var cnl = string.Format(NameFormat, Model.Cnl.CnlNum, Model.Cnl.Name);
+    var obj = Model.Obj == null ? "" : string.Format(NameFormat, Model.Obj.ObjNum, Model.Obj.Name);
+    var dev = Model.Device == null ? "" : string.Format(NameFormat, Model.Device.DeviceNum, Model.Device.Name);
+
+    <table id="tblCommand">
+        <tr>
+            <th>@dict.CnlRow</th>
+            <td>@cnl</td>
+        </tr>
+        <tr>
+            <th>@dict.ObjRow</th>
+            <td>@obj</td>
+        </tr>
+        <tr>
+            <th>@dict.DevRow</th>
+            <td>@dev</td>
+        </tr>
+    </table>
+
+    <form method="post">
+        @if (pluginContext.Options.CommandPassword)
+        {
+            <div class="mb-3">
+                <label id="lblPassword" for="txtPassword" class="form-label">@dict.lblPassword</label>
+                <input type="password" id="txtPassword" class="form-control @pwdExtraClass" required autofocus asp-for="Password" />
+            </div>
+        }
+
+        @if (Model.Input == CommandModel.InputType.Dec)
+        { 
+            <div class="mb-3">
+                <label id="lblCmdDec" for="txtCmdDec" class="form-label">@dict.lblCmdDec</label>
+                <input type="number" id="txtCmdDec" class="form-control @cmdExtraClass" step="any" required autofocus asp-for="CmdVal" />
+            </div>
+        }
+        else if (Model.Input == CommandModel.InputType.Hex)
+        { 
+            <div class="mb-3">
+                <label id="lblCmdHex" for="txtCmdHex" class="form-label">@dict.lblCmdHex</label>
+                <input type="text" id="txtCmdHex" class="form-control @cmdExtraClass" pattern="[a-fA-F0-9]+" required autofocus asp-for="CmdVal" />
+            </div>
+        }
+        else if (Model.Input == CommandModel.InputType.Bin)
+        {
+            <div class="mb-3">
+                <label id="lblCmdBin" for="txtCmdBin" class="form-label">@dict.lblCmdBin</label>
+                <input type="text" id="txtCmdBin" class="form-control @cmdExtraClass" pattern="[0-1]+" required autofocus asp-for="CmdVal" />
+            </div>
+        }
+        else if (Model.Input == CommandModel.InputType.Enum)
+        { 
+            <div class="mb-3">
+                <label id="lblCmdEnum" class="form-label">@dict.lblCmdEnum</label>
+                <div id="divEnum">
+                    @for (int i = 0; i < Model.EnumFormat.Count; i++)
+                    {
+                        var displayValue = Model.EnumFormat.Values[i];
+                        if (!string.IsNullOrEmpty(displayValue))
+                        {
+                            <button type="button" class="btn" style="background-color: @Model.EnumFormat.Colors[i]" data-cmdval="@i">@displayValue</button>
+                        }
+                    }
+                </div>
+                <input type="hidden" id="hidCmdEnum" asp-for="CmdVal" />
+            </div>
+        }
+        else if (Model.Input == CommandModel.InputType.Date)
+        {
+            var inputSubtype = Model.Format.Frmt switch
+            {
+                "d" or "D" => "date",
+                "t" or "T" => "time",
+                _ => "datetime-local"
+            };
+
+            <div class="mb-3">
+                <label id="lblCmdDate" for="txtCmdDate" class="form-label">@dict.lblCmdDate</label>
+                <input type="@inputSubtype" id="txtCmdDate" class="form-control" required autofocus asp-for="CmdData" />
+            </div>
+        }
+        else if (Model.Input == CommandModel.InputType.Str)
+        {
+            <div class="mb-3">
+                <label id="lblCmdData" for="txtCmdData" class="form-label d-block">@dict.lblCmdData</label>
+                <div class="form-check form-check-inline">
+                  <input type="radio" id="rbStr" name="cmdDataFormat"class="form-check-input" value="str" checked asp-for="CmdDataFormat">
+                  <label id="lblStr" class="form-check-label" for="rbStr">@dict.lblStr</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input type="radio" id="rbHex" name="cmdDataFormat" class="form-check-input" value="hex" asp-for="CmdDataFormat">
+                  <label id="lblHex" class="form-check-label" for="rbHex">@dict.lblHex</label>
+                </div>
+                <textarea id="txtCmdData" class="form-control @cmdExtraClass" rows="3" autofocus asp-for="CmdData"></textarea>
+                <div class="form-text">@Model.Format.Descr</div>
+            </div>
+        }
+    </form>
+}

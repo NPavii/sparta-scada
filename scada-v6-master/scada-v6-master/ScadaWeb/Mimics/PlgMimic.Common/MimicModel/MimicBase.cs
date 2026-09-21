@@ -1,0 +1,203 @@
+﻿// Copyright (c) Rapid Software LLC. All rights reserved.
+// Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
+
+using System.Dynamic;
+using System.Xml;
+
+namespace Scada.Web.Plugins.PlgMimic.MimicModel
+{
+    /// <summary>
+    /// A base class for mimic diagrams and faceplates.
+    /// <para>Базовый класс для мнемосхем и фейсплейтов.</para>
+    /// </summary>
+    public abstract class MimicBase : IContainer
+    {
+        /// <summary>
+        /// Gets or sets the XML root element name.
+        /// </summary>
+        protected string RootElemName { get; set; } = RootElement.Mimic;
+
+        /// <summary>
+        /// Gets the dependencies on the faceplates sorted by type name.
+        /// </summary>
+        public List<FaceplateMeta> Dependencies { get; } = [];
+
+        /// <summary>
+        /// Gets the document that contains mimic properties.
+        /// </summary>
+        public ExpandoObject Document { get; } = new();
+
+        /// <summary>
+        /// Gets the top-level components contained in the mimic.
+        /// </summary>
+        public List<Component> Components { get; } = [];
+
+        /// <summary>
+        /// Gets the images sorted by name.
+        /// </summary>
+        public List<Image> Images { get; } = [];
+
+        /// <summary>
+        /// Gets the parent container.
+        /// </summary>
+        public IContainer Parent => null;
+
+
+        /// <summary>
+        /// Loads the mimic from the XML node.
+        /// </summary>
+        protected void LoadFromXml(XmlElement rootElem, LoadContext loadContext)
+        {
+            if (rootElem.SelectSingleNode("Dependencies") is XmlNode dependenciesNode)
+            {
+                HashSet<string> typeNames = [];
+
+                foreach (XmlElement faceplateElem in dependenciesNode.SelectNodes("Faceplate"))
+                {
+                    FaceplateMeta faceplateMeta = new();
+                    faceplateMeta.LoadFromXml(faceplateElem);
+
+                    if (!string.IsNullOrEmpty(faceplateMeta.TypeName) && typeNames.Add(faceplateMeta.TypeName))
+                        Dependencies.Add(faceplateMeta);
+                }
+            }
+
+            if (rootElem.SelectSingleNode("Document") is XmlNode documentNode)
+            {
+                foreach (XmlElement childElem in documentNode.ChildNodes.OfType<XmlElement>())
+                {
+                    Document.LoadProperty(childElem);
+                }
+            }
+
+            if (rootElem.SelectSingleNode("Components") is XmlNode componentsNode)
+            {
+                loadContext.ComponentIDs.Clear();
+
+                foreach (XmlNode childNode in componentsNode.ChildNodes)
+                {
+                    Component component = new();
+
+                    if (component.LoadFromXml(childNode, loadContext))
+                    {
+                        component.Parent = this;
+                        Components.Add(component);
+                    }
+                }
+            }
+
+            if (rootElem.SelectSingleNode("Images") is XmlNode imagesNode)
+            {
+                HashSet<string> imageNames = [];
+
+                foreach (XmlNode imageNode in imagesNode.SelectNodes("Image"))
+                {
+                    Image image = new();
+                    image.LoadFromXml(imageNode);
+
+                    if (!string.IsNullOrEmpty(image.Name) && imageNames.Add(image.Name))
+                        Images.Add(image);
+                }
+            }
+
+            Dependencies.Sort();
+            Images.Sort();
+        }
+
+        /// <summary>
+        /// Saves the mimic into the XML node.
+        /// </summary>
+        protected void SaveToXml(XmlElement rootElem)
+        {
+            XmlElement dependenciesElem = rootElem.AppendElem("Dependencies");
+            XmlElement documentElem = rootElem.AppendElem("Document");
+            XmlElement componentsElem = rootElem.AppendElem("Components");
+            XmlElement imagesElem = rootElem.AppendElem("Images");
+
+            rootElem.SetAttribute("editorVersion", GetType().Assembly.GetName().Version);
+
+            foreach (FaceplateMeta faceplateMeta in Dependencies.OrderBy(d => d.TypeName))
+            {
+                faceplateMeta.SaveToXml(dependenciesElem.AppendElem("Faceplate"));
+            }
+
+            foreach (KeyValuePair<string, object> kvp in Document.OrderBy(p => p.Key))
+            {
+                ExpandoExtensions.SaveProperty(documentElem, kvp.Key, kvp.Value);
+            }
+
+            foreach (Component component in Components)
+            {
+                if (!string.IsNullOrEmpty(component.TypeName))
+                {
+                    component.SaveToXml(componentsElem.AppendElem(component.TypeName));
+                }
+            }
+
+            foreach (Image image in Images.OrderBy(i => i.Name))
+            {
+                image.SaveToXml(imagesElem.AppendElem("Image"));
+            }
+        }
+
+
+        /// <summary>
+        /// Loads the mimic diagram.
+        /// </summary>
+        public virtual void Load(Stream stream, LoadContext loadContext)
+        {
+            ArgumentNullException.ThrowIfNull(stream, nameof(stream));
+            ArgumentNullException.ThrowIfNull(loadContext, nameof(loadContext));
+
+            XmlDocument xmlDoc = new();
+            xmlDoc.Load(stream);
+            RootElemName = xmlDoc.DocumentElement.Name;
+            LoadFromXml(xmlDoc.DocumentElement, loadContext);
+        }
+
+        /// <summary>
+        /// Saves the mimic diagram.
+        /// </summary>
+        public virtual void Save(Stream stream)
+        {
+            ArgumentNullException.ThrowIfNull(stream, nameof(stream));
+
+            XmlDocument xmlDoc = new();
+            XmlDeclaration xmlDecl = xmlDoc.CreateXmlDeclaration("1.0", "utf-8", null);
+            xmlDoc.AppendChild(xmlDecl);
+
+            XmlElement rootElem = xmlDoc.CreateElement(RootElemName);
+            xmlDoc.AppendChild(rootElem);
+            SaveToXml(rootElem);
+
+            xmlDoc.Save(stream);
+        }
+
+        /// <summary>
+        /// Clears the mimic diagram.
+        /// </summary>
+        public virtual void Clear()
+        {
+            Dependencies.Clear();
+            Document.RemoveAll();
+            Components.Clear();
+            Images.Clear();
+        }
+
+        /// <summary>
+        /// Enumerates the components recursively.
+        /// </summary>
+        public IEnumerable<Component> EnumerateComponents()
+        {
+            foreach (Component component in Components)
+            {
+                yield return component;
+
+                foreach (Component childComponent in component.GetAllChildren())
+                {
+                    yield return childComponent;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+﻿@page "{id:int?}"
+@model TableViewModel
+@inject PluginContext pluginContext 
+@{
+    Layout = "_BasicLayout";
+    dynamic dict = Locale.GetDictionary("Scada.Web.Plugins.PlgMain.Areas.Main.Pages.TableView");
+}
+
+@section Styles {
+    <link href="~/plugins/Main/css/table-view.min.css" rel="stylesheet" asp-append-version="true" />
+}
+
+@section Scripts {
+    <script src="~/js/view-hub.js" asp-append-version="true"></script>
+    <script src="~/plugins/Main/js/main-api.js" asp-append-version="true"></script>
+    <script src="~/plugins/Main/js/table-common.js" asp-append-version="true"></script>
+    <script src="~/plugins/Main/js/table-view.js" asp-append-version="true"></script>
+    <script>
+        viewID = @Model.ViewID;
+        archiveBit = @Model.ArchiveBit;
+        chartArgs = "@Model.ChartArgs";
+        pluginOptions = @pluginContext.Options.ToJs();
+    </script>
+}
+
+@if (Model.ViewError)
+{
+    <div id="divError" class="box-center fs-2 text-danger">
+        @Model.ErrorMessage
+    </div>
+}
+else
+{
+    <form id="frmTableView" method="post">
+        <div id="divToolbar" class="toolbar">@*
+            *@<span class="toolbar-group"><input id="localDate" name="localDate" type="date" value="@Model.LocalDate" /></span>@*
+            *@<span class="toolbar-group"><select id="selStartTime">
+                    @Model.RenderOptionGroup(dict.PrevDate, false, TableViewModel.SelectOption.None)
+                    @Model.RenderOptionGroup(dict.SelDate, true, TableViewModel.SelectOption.First)
+                </select> - <select id="selEndTime">
+                    @Model.RenderOptionGroup(dict.SelDate, true, TableViewModel.SelectOption.Last)
+                </select></span>@*
+            *@<span class="toolbar-group"><span id="spanPrintBtn" class="tool-btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="@dict.spanPrintBtn_ToolTip"><i class="fa-solid fa-print"></i></span></span>@*
+            *@<span id="spanLoadingBadge" class="badge bg-info hidden">@dict.spanLoadingBadge</span>@*
+            *@<span id="spanErrorBadge" class="badge bg-danger hidden">@dict.spanErrorBadge</span>
+        </div>
+        <div id="divTableWrapper" class="table-wrapper">@Model.RenderTableView()</div>
+    </form>
+}

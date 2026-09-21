@@ -1,0 +1,80 @@
+﻿@import '../_variables';
+
+$indent-size: 20px;
+$icon-size: 16px;
+$icon-vert-adjust: -2px;
+
+.tree-view {
+    .node {
+        cursor: pointer;
+        display: table;
+        width: 100%;
+
+        &.disabled {
+            cursor: not-allowed;
+        }
+    }
+
+    .node-parts {
+        display: table-row;
+
+        & > div {
+            display: table-cell;
+        }
+    }
+
+    .child-nodes.hidden {
+        display: none;
+    }
+
+    .indent {
+        min-width: $indent-size;
+        width: $indent-size;
+    }
+
+    .icon {
+        min-width: $indent-size;
+        width: $indent-size;
+
+        img {
+            border: none;
+            height: $icon-size;
+            position: relative;
+            top: $icon-vert-adjust;
+            vertical-align: middle;
+            width: $icon-size;
+        }
+    }
+
+    .expander {
+        font-family: $awesome-font-family;
+        font-weight: 900;
+        min-width: $indent-size;
+        width: $indent-size;
+
+        &.left {
+            &::before {
+                content: "\f105";
+            }
+        }
+
+        &.right {
+            text-align: right;
+            width: 0;
+
+            &::before {
+                content: "\f104";
+            }
+        }
+
+        &.expanded {
+            &::before {
+                content: "\f107";
+            }
+        }
+
+        &.empty {
+            visibility: hidden;
+        }
+    }
+}

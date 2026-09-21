@@ -1,0 +1,238 @@
+﻿@import '../../../css/components/_splitter';
+@import "_modals.scss";
+
+$left-panel-width: 300px;
+$left-panel-min-width: 200px;
+$border-color: var(--bs-gray-500);
+$tool-window-font-size: 12px;
+$tool-window-font-weight: 500;
+
+#divToolbar {
+    border-bottom: 1px solid $border-color;
+    padding: 5px;
+    white-space: nowrap;
+
+    .wrapper {
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    .splitter {
+        display: inline-block;
+        width: 10px;
+    }
+
+    .dropdown .btn:first-child {
+        margin-right: 5px;
+    }
+}
+
+#divMain {
+    display: flex;
+    flex-direction: row;
+}
+
+#divLeftPanel {
+    background-color: var(--bs-gray-100);
+    min-width: $left-panel-min-width;
+    overflow: hidden;
+    width: $left-panel-width;
+
+    .tab-pane {
+        height: 100%;
+        overflow: auto;
+    }
+}
+
+#divComponents {
+    font-size: $tool-window-font-size;
+    font-weight: $tool-window-font-weight;
+    line-height: 16px;
+
+    .component-group-header {
+        background-color: hsl(230, 15%, 30%, 0.20);
+        padding: 5px 10px;
+
+        &:hover {
+            background-color: hsl(230, 15%, 30%, 0.24);
+        }
+    }
+
+    .component-item {
+        cursor: pointer;
+        display: flex;
+        padding: 5px 10px;
+
+        &:hover {
+            background-color: var(--bs-gray-200);
+        }
+
+        &:active {
+            background-color: var(--bs-blue);
+            color: var(--bs-white);
+        }
+
+        .component-icon {
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+        }
+    }
+}
+
+#divStructure {
+    font-size: $tool-window-font-size;
+    font-weight: $tool-window-font-weight;
+    padding: 10px;
+
+    ul {
+        list-style-type: none;
+        margin: 0 0 0 20px;
+        padding: 0;
+
+        &.list-top {
+            margin-left: 0;
+        }
+
+        li {
+            white-space: nowrap;
+
+            .node {
+                cursor: default;
+                display: inline-block;
+                margin-bottom: 1px;
+                margin-left: -5px;
+                padding: 0px 5px;
+
+                &:hover {
+                    background-color: var(--bs-gray-200);
+
+                    .node-btn {
+                        color: var(--bs-primary);
+                    }
+                }
+
+                .node-text {
+                    display: inline-block;
+                }
+
+                .node-btn {
+                    border-radius: 4px;
+                    color: var(--bs-gray-300);
+                    cursor: pointer;
+                    display: inline-block;
+                    margin-left: 5px;
+                    padding: 0px 5px;
+
+                    &:last-child {
+                        margin-right: -5px;
+                    }
+
+                    &:hover {
+                        background-color: var(--bs-primary);
+                        color: var(--bs-white);
+                    }
+                }
+            }
+
+            &.has-error {
+                .node-text,
+                > .node-comp {
+                    color: var(--bs-danger);
+                    text-decoration: line-through;
+                }
+            }
+
+            &.item-mimic {
+                .node {
+                    cursor: pointer;
+
+                    &.selected {
+                        background-color: var(--bs-primary);
+                        color: var(--bs-white);
+                    }
+                }
+            }
+        }
+    }
+}
+
+#divSplitter {
+    border-left: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+}
+
+#divMimicWrapper {
+    background-color: var(--bs-gray-100);
+}
+
+#divToastContainer {
+    bottom: 0;
+    padding: 1rem;
+    position: fixed;
+    right: 0;
+}
+
+/* Tweakpane */
+#tweakpane {
+    --tp-base-background-color: hsla(230, 5%, 90%, 1.00);
+    --tp-base-shadow-color: transparent;
+    --tp-button-background-color: hsla(230, 7%, 75%, 1.00);
+    --tp-button-background-color-active: hsla(230, 7%, 60%, 1.00);
+    --tp-button-background-color-focus: hsla(230, 7%, 65%, 1.00);
+    --tp-button-background-color-hover: hsla(230, 7%, 70%, 1.00);
+    --tp-button-foreground-color: hsla(230, 10%, 30%, 1.00);
+    --tp-container-background-color: hsla(230, 15%, 30%, 0.20);
+    --tp-container-background-color-active: hsla(230, 15%, 30%, 0.32);
+    --tp-container-background-color-focus: hsla(230, 15%, 30%, 0.28);
+    --tp-container-background-color-hover: hsla(230, 15%, 30%, 0.24);
+    --tp-container-foreground-color: hsla(230, 10%, 30%, 1.00);
+    --tp-groove-foreground-color: hsla(230, 15%, 30%, 0.10);
+    --tp-input-background-color: hsla(230, 15%, 30%, 0.10);
+    --tp-input-background-color-active: hsla(230, 15%, 30%, 0.22);
+    --tp-input-background-color-focus: hsla(230, 15%, 30%, 0.18);
+    --tp-input-background-color-hover: hsla(230, 15%, 30%, 0.14);
+    --tp-input-foreground-color: hsla(230, 10%, 30%, 1.00);
+    --tp-label-foreground-color: hsla(230, 10%, 30%, 0.70);
+    --tp-monitor-background-color: hsla(230, 15%, 30%, 0.10);
+    --tp-monitor-foreground-color: hsla(230, 10%, 30%, 0.50);
+    --tp-base-border-radius: 0;
+    --tp-base-font-family: var(--bs-body-font-family);
+
+    .tp-rotv {
+        font-size: $tool-window-font-size;
+    }
+
+    .rs-array-item {
+        cursor: pointer;
+
+        &.rs-selected {
+            background-color: var(--bs-primary);
+            padding-bottom: 2px;
+            padding-top: 2px;
+
+            .tp-lblv_l {
+                color: var(--bs-white);
+            }
+        }
+    }
+}
+
+/* Popovers */
+.image-preview {
+    max-height: 100px;
+    max-width: 100px;
+    min-width: 20px;
+    width: fit-content;
+}
+
+/* Modals */
+#divTextEditor {
+    .editor {
+        border: 1px solid var(--bs-border-color);
+        height: 300px;
+        overflow: auto;
+        position: relative;
+        resize: vertical;
+    }
+}

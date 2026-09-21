@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModDbExportDictionaries>
+  <Dictionary key="Scada.Server.Modules.ModDbExport.View.Controls.CtrlArcReplication">
+    <Phrase key="gbOptions">存档复制选项</Phrase>
+    <Phrase key="chkEnabled">启用</Phrase>
+    <Phrase key="chkAutoExport">自动导出存档</Phrase>
+    <Phrase key="lblMinDepth">最小深度，秒</Phrase>
+    <Phrase key="lblMaxDepth">最大深度，秒</Phrase>
+    <Phrase key="lblReadingStep">读取步骤，秒</Phrase>
+    <Phrase key="lblHistArchiveBit">历史存档的比特数</Phrase>
+    <Phrase key="lblEventArchiveBit">事件存档的比特数</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Server.Modules.ModDbExport.View.Controls.CtrlCurDataExport">
+    <Phrase key="gbOptions">当前数据导出选项</Phrase>
+    <Phrase key="lblTrigger">触发</Phrase>
+    <Phrase key="cbTrigger.Items[0]">接受时</Phrase>
+    <Phrase key="cbTrigger.Items[1]">定时器</Phrase>
+    <Phrase key="lblTimePeriod">定时器周期，秒</Phrase>
+    <Phrase key="lblAllDataPeriod">导出所有通道资料的周期，秒</Phrase>
+    <Phrase key="chkSkipUnchanged">跳过未更改的数据</Phrase>
+    <Phrase key="chkIncludeCalculated">包括計算类型的通道</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Server.Modules.ModDbExport.View.Controls.CtrlGeneral">
+    <Phrase key="gbGeneral">通用选项</Phrase>
+    <Phrase key="chkActive">启用</Phrase>
+    <Phrase key="lblTargetID">目标ID</Phrase>
+    <Phrase key="lblName">名称</Phrase>
+    <Phrase key="lblCmdCode">命令代码</Phrase>
+    <Phrase key="lblStatusCnlNum">状态通道编号</Phrase>
+    <Phrase key="lblMaxQueueSize">最大队列大小</Phrase>
+    <Phrase key="lblDataLifetime">队列中数据生命周期，秒</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Server.Modules.ModDbExport.View.Controls.CtrlHistDataExport">
+    <Phrase key="gbOptions">历史数据导出选项</Phrase>
+    <Phrase key="chkIncludeCalculated">包括計算类型的通道</Phrase>
+    <Phrase key="lblExportCalculatedDelay">导出前延迟，秒</Phrase>
+    <Phrase key="lblHistArchiveBit">历史存档的比特数</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Server.Modules.ModDbExport.View.Controls.CtrlQuery">
+    <Phrase key="gbGeneral">通用</Phrase>
+    <Phrase key="chkActive">启用</Phrase>
+    <Phrase key="lblName">名称</Phrase>
+    <Phrase key="lblDataKind">数据种类</Phrase>
+    <Phrase key="cbDataKind.Items[0]">当前数据</Phrase>
+    <Phrase key="cbDataKind.Items[1]">历史数据</Phrase>
+    <Phrase key="cbDataKind.Items[2]">事件</Phrase>
+    <Phrase key="cbDataKind.Items[3]">事件确认</Phrase>
+    <Phrase key="cbDataKind.Items[4]">命令</Phrase>
+    <Phrase key="gbFilter">筛选</Phrase>
+    <Phrase key="lblCnlNum">通道编号</Phrase>
+    <Phrase key="lblObjNum">对象编号</Phrase>
+    <Phrase key="lblDeviceNum">设备编号</Phrase>
+    <Phrase key="gbQuery">查询</Phrase>
+    <Phrase key="chkSingleQuery">单次查询（需输入数字）</Phrase>
+    <Phrase key="btnViewParameters.ToolTip">可用参数</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Server.Modules.ModDbExport.View.Forms.FrmModuleConfig">
+    <Phrase key="this">导出到数据库</Phrase>
+    <Phrase key="ddbAdd.ToolTip">新增导出目标</Phrase>
+    <Phrase key="btnSqlServer">Microsoft SQL服务器</Phrase>
+    <Phrase key="btnMySql">MySQL</Phrase>
+    <Phrase key="btnOracle">Oracle</Phrase>
+    <Phrase key="btnPostgreSql">PostgreSQL</Phrase>
+    <Phrase key="btnAddCurrentDataQuery.ToolTip">新增当前数据查询</Phrase>
+    <Phrase key="btnAddHistoricalDataQuery.ToolTip">新增历史数据查询</Phrase>
+    <Phrase key="btnAddEventQuery.ToolTip">新增事件查询</Phrase>
+    <Phrase key="btnAddEventAckQuery.ToolTip">新增事件确认查询</Phrase>
+    <Phrase key="btnAddCommandQuery.ToolTip">新增命令查询</Phrase>
+    <Phrase key="btnMoveUp.ToolTip">上移</Phrase>
+    <Phrase key="btnMoveDown.ToolTip">下移</Phrase>
+    <Phrase key="btnDelete.ToolTip">刪除</Phrase>
+    <Phrase key="btnCut.ToolTip">剪切</Phrase>
+    <Phrase key="btnCopy.ToolTip">复制</Phrase>
+    <Phrase key="btnPaste.ToolTip">粘贴</Phrase>
+    <Phrase key="gbTarget">导出目标</Phrase>
+    <Phrase key="btnSave">保存</Phrase>
+    <Phrase key="btnCancel">取消</Phrase>
+    <Phrase key="btnClose">关闭</Phrase>
+    <Phrase key="miCollapseAll">全部折叠</Phrase>
+    <Phrase key="AddTargets">新增目标</Phrase>
+    <Phrase key="ArchiveExportOptionsNode">归档复制项目</Phrase>
+    <Phrase key="ConnectionOptionsNode">连线选项</Phrase>
+    <Phrase key="CopySuffix">- 复制</Phrase>
+    <Phrase key="CurrentExportOptionsNode">当前数据</Phrase>
+    <Phrase key="ExportOptionsNode">导出选项</Phrase>
+    <Phrase key="GeneralOptionsNode">一般选项</Phrase>
+    <Phrase key="HistoricalExportOptionsNode">历史数据</Phrase>
+    <Phrase key="SelectChildNode">选择子节点</Phrase>
+    <Phrase key="TargetName">目标{0}</Phrase>
+    <Phrase key="TargetNameNotUnique">目标名称必須是唯一的。</Phrase>
+    <Phrase key="QueriesNode">查询</Phrase>
+    <Phrase key="QueryName">查询{0}</Phrase>
+    <Phrase key="UnnamedQuery">&lt;未命名查询&gt;</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Server.Modules.ModDbExport.View.Forms.FrmQueryParametrs">
+    <Phrase key="this">可用参数</Phrase>
+    <Phrase key="colParamsName">名称</Phrase>
+    <Phrase key="colParams">描述</Phrase>
+    <Phrase key="btnClose">关闭</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Server.Modules.ModDbExport.View.QueryInfo.Command">
+    <Phrase key="CommandID">命令ID</Phrase>
+    <Phrase key="CreationTime">命令创建时间</Phrase>
+    <Phrase key="ClientName">发送命令的客戶端</Phrase>
+    <Phrase key="UserID">使用者身分</Phrase>
+    <Phrase key="CnlNum">通道编号</Phrase>
+    <Phrase key="ObjNum">对象编号</Phrase>
+    <Phrase key="DeviceNum">设备编号</Phrase>
+    <Phrase key="CmdNum">命令编号</Phrase>
+    <Phrase key="CmdCode">命令代码</Phrase>
+    <Phrase key="CmdVal">命令值</Phrase>
+    <Phrase key="CmdData">命令数据</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Server.Modules.ModDbExport.View.QueryInfo.Data">
+    <Phrase key="Timestamp">时间戳</Phrase>
+    <Phrase key="ChannelValue">通道{0}的值</Phrase>
+    <Phrase key="ChannelStatus">通道{0}的状态</Phrase>
+    <Phrase key="FirstObject">首个通道的对象编号</Phrase>
+    <Phrase key="FirstDevice">首个通道的设备编号</Phrase>
+    <Phrase key="CnlNum">通道编号</Phrase>
+    <Phrase key="Val">通道值</Phrase>
+    <Phrase key="Stat">通道状态</Phrase>
+    <Phrase key="ObjNum">对象编号</Phrase>
+    <Phrase key="DeviceNum">设备编号</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Server.Modules.ModDbExport.View.QueryInfo.Event">
+    <Phrase key="EventID">事件ID</Phrase>
+    <Phrase key="Timestamp">事件时间戳</Phrase>
+    <Phrase key="Hidden">事件已隐藏</Phrase>
+    <Phrase key="CnlNum">通道编号</Phrase>
+    <Phrase key="ObjNum">对象编号</Phrase>
+    <Phrase key="DeviceNum">设备编号</Phrase>
+    <Phrase key="PrevCnlVal">前通道值</Phrase>
+    <Phrase key="PrevCnlStat">前通道状态</Phrase>
+    <Phrase key="CnlVal">通道值</Phrase>
+    <Phrase key="CnlStat">通道状态</Phrase>
+    <Phrase key="Severity">严重程度</Phrase>
+    <Phrase key="AckRequired">需要确认</Phrase>
+    <Phrase key="Ack">事件已确认</Phrase>
+    <Phrase key="AckTimestamp">确认时间戳</Phrase>
+    <Phrase key="AckUserID">确认用戶ID</Phrase>
+    <Phrase key="TextFormat">文字格式</Phrase>
+    <Phrase key="EventText">事件文字</Phrase>
+    <Phrase key="EventData">事件数据</Phrase>
+  </Dictionary>
+  <Dictionary key="Scada.Server.Modules.ModDbExport.View.QueryInfo.EventAck">
+    <Phrase key="EventID">事件ID</Phrase>
+    <Phrase key="AckTimestamp">确认时间戳</Phrase>
+    <Phrase key="AckUserID">用户ID</Phrase>
+  </Dictionary>
+</ModDbExportDictionaries>

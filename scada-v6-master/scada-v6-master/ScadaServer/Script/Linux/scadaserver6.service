@@ -1,0 +1,13 @@
+[Unit]
+Description=Rapid SCADA Server
+
+[Service]
+Type=notify
+WorkingDirectory=/opt/scada/ScadaServer
+ExecStart=/usr/bin/dotnet /opt/scada/ScadaServer/ScadaServerWkr.dll
+Restart=always
+RestartSec=10
+SyslogIdentifier=scadaserver6
+
+[Install]
+WantedBy=multi-user.target

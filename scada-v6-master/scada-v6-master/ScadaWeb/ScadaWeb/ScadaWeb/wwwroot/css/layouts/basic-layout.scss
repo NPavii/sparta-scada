@@ -1,0 +1,41 @@
+﻿@import '../_variables';
+@import '../_mixins';
+
+body {
+    --bs-link-color: #{$link-fore-color};
+    --bs-link-color-rgb: #{$link-fore-color-rgb};
+    --bs-link-hover-color: #{$link-hover-fore-color};
+    --bs-link-hover-color-rgb: #{$link-hover-fore-color-rgb};
+
+    a {
+        text-decoration: none;
+    }
+
+    &.modal-page {
+        overflow: hidden;
+        padding: $spacer * 0.25;
+
+        textarea {
+            resize: none;
+        }
+    }
+}
+
+.link-colored {
+    @include link-colored;
+}
+
+.link-no-decor {
+    @include link-no-decor;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.box-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}

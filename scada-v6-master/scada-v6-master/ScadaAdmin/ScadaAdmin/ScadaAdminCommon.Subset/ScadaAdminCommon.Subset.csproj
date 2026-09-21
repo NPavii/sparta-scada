@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <RootNamespace>Scada.Admin</RootNamespace>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <Authors>Mikhail Shiryaev</Authors>
+    <Company>Rapid Software LLC</Company>
+    <Product>Rapid SCADA</Product>
+    <Copyright>Copyright © 2026</Copyright>
+    <Version>6.3.0</Version>
+    <AssemblyVersion>6.3.0.0</AssemblyVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\ScadaAdminCommon\Config\AdminConfig.cs" Link="Config\AdminConfig.cs" />
+    <Compile Include="..\ScadaAdminCommon\Config\ChannelNumberingOptions.cs" Link="Config\ChannelNumberingOptions.cs" />
+    <Compile Include="..\ScadaAdminCommon\Config\NumberingOptions.cs" Link="Config\NumberingOptions.cs" />
+    <Compile Include="..\ScadaAdminCommon\Deployment\DeploymentConfig.cs" Link="Deployment\DeploymentConfig.cs" />
+    <Compile Include="..\ScadaAdminCommon\Deployment\DeploymentProfile.cs" Link="Deployment\DeploymentProfile.cs" />
+    <Compile Include="..\ScadaAdminCommon\Deployment\DownloadOptions.cs" Link="Deployment\DownloadOptions.cs" />
+    <Compile Include="..\ScadaAdminCommon\Deployment\ITransferControl.cs" Link="Deployment\ITransferControl.cs" />
+    <Compile Include="..\ScadaAdminCommon\Deployment\ProgressTracker.cs" Link="Deployment\ProgressTracker.cs" />
+    <Compile Include="..\ScadaAdminCommon\Deployment\UploadOptions.cs" Link="Deployment\UploadOptions.cs" />
+    <Compile Include="..\ScadaAdminCommon\Lang\AdminPhrases.cs" Link="Lang\AdminPhrases.cs" />
+    <Compile Include="..\ScadaAdminCommon\Project\CommApp.cs" Link="Project\CommApp.cs" />
+    <Compile Include="..\ScadaAdminCommon\Project\ConfigDatabase.cs" Link="Project\ConfigDatabase.cs" />
+    <Compile Include="..\ScadaAdminCommon\Project\ProjectApp.cs" Link="Project\ProjectApp.cs" />
+    <Compile Include="..\ScadaAdminCommon\Project\ProjectInstance.cs" Link="Project\ProjectInstance.cs" />
+    <Compile Include="..\ScadaAdminCommon\Project\ProjectVersion.cs" Link="Project\ProjectVersion.cs" />
+    <Compile Include="..\ScadaAdminCommon\Project\ProjectViews.cs" Link="Project\ProjectViews.cs" />
+    <Compile Include="..\ScadaAdminCommon\Project\ScadaProject.cs" Link="Project\ScadaProject.cs" />
+    <Compile Include="..\ScadaAdminCommon\Project\ServerApp.cs" Link="Project\ServerApp.cs" />
+    <Compile Include="..\ScadaAdminCommon\Project\WebApp.cs" Link="Project\WebApp.cs" />
+    <Compile Include="..\ScadaAdminCommon\AdminUtils.cs" Link="AdminUtils.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ScadaCommon\ScadaCommon\ScadaCommon.csproj" />
+    <ProjectReference Include="..\..\..\ScadaCommon\ScadaCommon.Log\ScadaCommon.Log.csproj" />
+    <ProjectReference Include="..\..\..\ScadaServer\ScadaServer\ScadaServerCommon\ScadaServerCommon.csproj" />
+    <ProjectReference Include="..\..\..\ScadaComm\ScadaComm\ScadaCommCommon\ScadaCommCommon.csproj" />
+    <ProjectReference Include="..\..\..\ScadaWeb\ScadaWeb\ScadaWebCommon.Subset\ScadaWebCommon.Subset.csproj" />
+  </ItemGroup>
+
+</Project>
